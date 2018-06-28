@@ -1,8 +1,16 @@
 # frozen_string_literal: true
 
-require "creditario/client/version"
+require "oj"
 
 module Creditario # :nodoc:
+  autoload :Version, ".lib/creditario/version"
+  autoload :Exceptions, "./lib/creditario/exceptions"
+  autoload :API, "./lib/creditario/api"
+  autoload :Resource, "./lib/creditario/resources/resource"
+  autoload :Customer, "./lib/creditario/resources/customer"
+  autoload :CreditApplication, "./lib/creditario/resources/credit_application"
+  autoload :Product, "./lib/creditario/resources/product"
+
   ###
   # == Creditario::Client
   # Modulo que será utilizado para consumir la API de creditar.io
@@ -10,6 +18,10 @@ module Creditario # :nodoc:
     ###
     # URL al ambiente de *production* de la API de creditar.io
     @api_base = "https://www.creditar.io"
+
+    ###
+    # Version a utilizar de la API de creditar.io
+    @api_version = 1
 
     class << self
       ###
@@ -31,6 +43,11 @@ module Creditario # :nodoc:
       #
       #  Creditario::Client.api_base = "https://staging.creditar.io"
       attr_accessor :api_base
+
+      ###
+      # Versión a utilizar de la API de creditar.io
+      # Por default es 1
+      attr_accessor :api_version
     end
   end
 end
