@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
 require "oj"
-require "creditario/client/version"
-require "creditario/exceptions"
-require "creditario/api"
 
 module Creditario # :nodoc:
+  autoload :Version, ".lib/creditario/version"
+  autoload :Exceptions, "./lib/creditario/exceptions"
+  autoload :API, "./lib/creditario/api"
+  autoload :Resource, "./lib/creditario/resources/resource"
+  autoload :Customer, "./lib/creditario/resources/customer"
+  autoload :CreditApplication, "./lib/creditario/resources/credit_application"
+  autoload :Product, "./lib/creditario/resources/product"
+
   ###
   # == Creditario::Client
   # Modulo que será utilizado para consumir la API de creditar.io
