@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"8cbbf1e05c032ad606953c54353440d4"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 2858961f-5a59-4917-94e9-f06539a938f3
+X-Runtime: 0.207948
+Transfer-Encoding: chunked
+
+{"data":[{"short_name":"credi-car","name":"CrediAuto","default_amount_cents":0,"minimum_amount_cents":0,"maximum_amount_cents":0,"installments_number":0,"installments_minimum":0,"installments_maximum":0,"created_at":"2018-06-04T12:41:37.184-05:00","updated_at":"2018-06-19T20:51:36.318-05:00","id":"c005b7f7-a44a-4ec0-bf7f-73d15d806fd9","interest_rate":10.0}],"links":[{"rel":"self","uri":"/products/c005b7f7-a44a-4ec0-bf7f-73d15d806fd9"}]}

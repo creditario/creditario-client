@@ -10,6 +10,8 @@ module Creditario # :nodoc:
   autoload :Customer, "./lib/creditario/resources/customer"
   autoload :CreditApplication, "./lib/creditario/resources/credit_application"
   autoload :Product, "./lib/creditario/resources/product"
+  autoload :Products, "./lib/creditario/repositories/products"
+  autoload :PaginatedCollection, "./lib/creditario/utils/paginated_collection"
 
   ###
   # == Creditario::Client
@@ -48,6 +50,13 @@ module Creditario # :nodoc:
       # Versión a utilizar de la API de creditar.io
       # Por default es 1
       attr_accessor :api_version
+
+      ###
+      # Método de acceso al repositorio de Productos.
+      # Para más información, puedes consultar la documentación de Creditario::Products
+      def products
+        Creditario::Products
+      end
     end
   end
 end
