@@ -13,7 +13,7 @@ class Creditario::ProductsTest < CreditarioAPITest
   end
 
   def test_it_list_products
-    stub_request(:get, "#{Creditario::Client.api_base}/products").
+    stub_request(:get, build_api_uri("products")).
       with(headers: @headers).
       to_return(use_fixture("GET-Products-200"))
 
@@ -24,7 +24,7 @@ class Creditario::ProductsTest < CreditarioAPITest
   end
 
   def test_it_retrieves_a_product
-    stub_request(:get, "#{Creditario::Client.api_base}/products/c005b7f7-a44a-4ec0-bf7f-73d15d806fd9").
+    stub_request(:get, build_api_uri("products", "c005b7f7-a44a-4ec0-bf7f-73d15d806fd9")).
       with(headers: @headers).
       to_return(use_fixture("GET-Product-200"))
 
@@ -34,7 +34,7 @@ class Creditario::ProductsTest < CreditarioAPITest
   end
 
   def test_it_retrieves_a_missing_product
-    stub_request(:get, "#{Creditario::Client.api_base}/products/c005b7f7-b124-4ec0-bf7f-73d15d806fd9").
+    stub_request(:get, build_api_uri("products", "c005b7f7-b124-4ec0-bf7f-73d15d806fd9")).
       with(headers: @headers).
       to_return(use_fixture("GET-Product-404"))
 

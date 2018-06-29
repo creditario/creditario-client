@@ -12,4 +12,9 @@ class CreditarioAPITest < Minitest::Test
       fixture_path = File.join(".", "test", "fixtures", [filename, extension].join("."))
       File.open(fixture_path)
     end
+
+    def build_api_uri(*parts)
+      parts.unshift(Creditario::Client.api_base)
+      parts.join("/")
+    end
 end
