@@ -15,7 +15,7 @@ class Creditario::ProductsTest < CreditarioAPITest
   def test_it_list_products
     stub_request(:get, "#{Creditario::Client.api_base}/products").
       with(headers: @headers).
-      to_return(File.open("./test/fixtures/GET-Products-200.txt"))
+      to_return(use_fixture("GET-Products-200"))
 
     result = @subject.list
 
@@ -26,7 +26,7 @@ class Creditario::ProductsTest < CreditarioAPITest
   def test_it_retrieves_a_product
     stub_request(:get, "#{Creditario::Client.api_base}/products/c005b7f7-a44a-4ec0-bf7f-73d15d806fd9").
       with(headers: @headers).
-      to_return(File.open("./test/fixtures/GET-Product-200.txt"))
+      to_return(use_fixture("GET-Product-200"))
 
     result = @subject.retrieve("c005b7f7-a44a-4ec0-bf7f-73d15d806fd9")
 
