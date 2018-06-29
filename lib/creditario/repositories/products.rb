@@ -7,7 +7,7 @@ module Creditario # :nodoc:
   # Repositorio de Productos, permite realizar las siguientes operaciones
   # sobre Productos de creditar.io:
   #
-  # - Obtener todos Productos Activos:
+  # - Obtener todos los Productos Activos:
   #
   #     result = Creditario::Products.list
   #     => Creditario::PaginatedCollection

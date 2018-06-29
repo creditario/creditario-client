@@ -1,0 +1,15 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"3ad73397d59835913a2cea4a447c3823"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: e7b08e24-917e-473b-b3e2-ebca76828ed8
+X-Runtime: 0.080023
+Transfer-Encoding: chunked
+
+{"data":[{"email":"usuario@needsmoney.com","first_name":"Juan","second_name":"Carlos","last_name":"Flores","mother_name":"Iglesias","blocked":false,"created_at":"2018-06-29T11:43:01.304-05:00","updated_at":"2018-06-29T11:43:01.304-05:00","id":"2e9d05b8-2180-4779-bab6-bdfd41d1569f","date_of_birth":"","rfc":"","curp":"","credit_applications":[{"application_number":"NWSVKXKV-3","flow":"","status":"","amount_cents":0,"approved_amount_cents":0,"street":"","exterior_number":"","interior_number":"","neighborhood":"","state":"","zipcode":"","home_phone":"","mobile_phone":"","classification":"","description":"","metadata":{},"rejected_notes":"","created_at":"2018-06-29T11:43:01.337-05:00","updated_at":"2018-06-29T11:43:01.353-05:00","rejected_at":"","approved_at":"","id":"c29fa730-2ead-48fb-b928-5f5efba7ae8b","product":{"short_name":"credi-car","name":"CrediAuto","default_amount_cents":0,"minimum_amount_cents":0,"maximum_amount_cents":0,"installments_number":0,"installments_minimum":0,"installments_maximum":0,"created_at":"2018-06-21T12:25:52.171-05:00","updated_at":"2018-06-29T11:39:54.351-05:00","id":"910a1971-a628-4b59-8b58-ed85c264c6dd","interest_rate":0.0}}]}],"links":[{"rel":"self","uri":"/customers/2e9d05b8-2180-4779-bab6-bdfd41d1569f"},{"id":"credi-car","rel":"product","uri":"/products/credi-car"},{"id":"CrediAuto","rel":"product","uri":"/products/CrediAuto"},{"id":0,"rel":"product","uri":"/products/0"},{"id":0,"rel":"product","uri":"/products/0"},{"id":0,"rel":"product","uri":"/products/0"},{"id":0,"rel":"product","uri":"/products/0"},{"id":0,"rel":"product","uri":"/products/0"},{"id":0,"rel":"product","uri":"/products/0"},{"id":"2018-06-21T12:25:52.171-05:00","rel":"product","uri":"/products/2018-06-21%2012:25:52%20-0500"},{"id":"2018-06-29T11:39:54.351-05:00","rel":"product","uri":"/products/2018-06-29%2011:39:54%20-0500"},{"id":"910a1971-a628-4b59-8b58-ed85c264c6dd","rel":"product","uri":"/products/910a1971-a628-4b59-8b58-ed85c264c6dd"},{"id":0.0,"rel":"product","uri":"/products/0.0"},{"id":"c29fa730-2ead-48fb-b928-5f5efba7ae8b","rel":"customer.credit_application","uri":"/customers/2e9d05b8-2180-4779-bab6-bdfd41d1569f/credit_application/c29fa730-2ead-48fb-b928-5f5efba7ae8b"}]}

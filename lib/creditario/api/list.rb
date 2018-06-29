@@ -8,7 +8,7 @@ module Creditario # :nodoc:
     # Modulo encargado de obtener recursos paginados de la API de creditar.io
     module List
       ###
-      # Realiza una llamada GET al path del Repositorio que este haciendo uso
+      # Realiza una llamada GET al path del Repositorio que esta haciendo uso
       # de este modulo.
       #
       # Devuelve una colección paginada de los recursos que el Repositorio maneja.

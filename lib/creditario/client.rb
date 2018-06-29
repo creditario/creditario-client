@@ -8,6 +8,7 @@ module Creditario # :nodoc:
   autoload :API, "./lib/creditario/api"
   autoload :Resource, "./lib/creditario/resources/resource"
   autoload :Customer, "./lib/creditario/resources/customer"
+  autoload :Customers, "./lib/creditario/repositories/customers"
   autoload :CreditApplication, "./lib/creditario/resources/credit_application"
   autoload :Product, "./lib/creditario/resources/product"
   autoload :Products, "./lib/creditario/repositories/products"
@@ -56,6 +57,13 @@ module Creditario # :nodoc:
       # Para más información, puedes consultar la documentación de Creditario::Products
       def products
         Creditario::Products
+      end
+
+      ###
+      # Método de acceso al repositorio de Clientes.
+      # Para más información, puedes consultar la documentación de Creditario::Customers
+      def customers
+        Creditario::Customers
       end
     end
   end

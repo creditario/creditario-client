@@ -71,6 +71,7 @@ module Creditario # :nodoc:
           def handle_exceptions(response)
             return if response.code.to_i < 400
 
+            raise Exceptions::ForbiddenError.new(response) if response.code == "403"
             raise Exceptions::ResourceNotFoundError.new(response) if response.code == "404"
             raise Exceptions::UnprocessableEntityError.new(response) if response.code == "422"
           end
