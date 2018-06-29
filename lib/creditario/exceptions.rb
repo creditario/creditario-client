@@ -28,10 +28,10 @@ module Creditario
     class ResourceNotFoundError < StandardError
       ###
       # Contiene los detalles de la respuesta de creditar.io
-      attr_reader :response
+      attr_reader :server_response
 
       def initialize(response) # :nodoc:
-        @response = Oj.load(response.body)
+        @server_response = Oj.load(response.body)
         super(msg = "The resource does not exist")
       end
     end
@@ -45,10 +45,10 @@ module Creditario
     class UnprocessableEntityError < StandardError
       ###
       # Contiene los detalles de la respuesta de creditar.io
-      attr_reader :response
+      attr_reader :server_response
 
       def initialize(response) # :nodoc:
-        @response = Oj.load(response.body)
+        @server_response = Oj.load(response.body)
         super(msg = "There are some validation issues")
       end
     end

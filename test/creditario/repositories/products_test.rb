@@ -32,4 +32,15 @@ class Creditario::ProductsTest < CreditarioAPITest
 
     assert result.is_a? Creditario::Product
   end
+
+  def test_it_retrieves_a_missing_product
+    stub_request(:get, "#{Creditario::Client.api_base}/products/c005b7f7-b124-4ec0-bf7f-73d15d806fd9").
+      with(headers: @headers).
+      to_return(use_fixture("GET-Product-404"))
+
+    result = @subject.retrieve("c005b7f7-b124-4ec0-bf7f-73d15d806fd9")
+
+    assert result.is_a? Hash
+    assert result.has_key? "errors"
+  end
 end
