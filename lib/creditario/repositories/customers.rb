@@ -13,19 +13,19 @@ module Creditario # :nodoc:
   #     => Creditario::PaginatedCollection
   #
   #     result.items
-  #     => [Creditario::Customer, Creditario::Customer]
+  #     => [Creditario::Customer, Creditario::Customer, ...]
   #
-  # - Obtener un Cliente en especifico
+  # - Obtener un Cliente en especifico:
   #
   #     Creditario::Customers.retrieve("2e9d05b8-2180-4779-bab6-bdfd41d1569f")
   #     => Creditario::Customer
   #
-  # - Crear un Cliente
+  # - Crear un Cliente:
   #
   #     result = Creditario::Customers.create(email: "karla@quieredinero.com", first_name: "Karla")
   #     => Creditario::Customer
   #
-  # - Actualizar un cliente
+  # - Actualizar un cliente:
   #
   #     result = Creditario::Customers.update("2e9d05b8-2180-4779-bab6-bdfd41d1569f", { email: "karina@necesitadinero.com" })
   #     => Creditario::Customer

@@ -28,13 +28,13 @@ class Creditario::ResourceTest < Minitest::Test
 
   def test_it_builds_has_many_associations
     @subject.class_eval do
-      has_many :credit_applications, class: Creditario::CreditApplication
+      has_many :credit_applications, class: Creditario::Application
     end
 
     object = @subject.new(first_name: "Juan", credit_applications: [{ id: "636264b1-77a2-45ef-b643-e44cfbc84d40" }])
 
     assert object.credit_applications.any?
-    assert object.credit_applications.first.is_a? Creditario::CreditApplication
+    assert object.credit_applications.first.is_a? Creditario::Application
   end
 
   def test_it_builds_has_one_associations

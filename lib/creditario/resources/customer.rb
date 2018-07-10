@@ -20,6 +20,6 @@ module Creditario # :nodoc:
   class Customer
     include Resource
 
-    has_many :credit_applications, class: Creditario::CreditApplication
+    has_many :credit_applications, class: Creditario::Application
   end
 end

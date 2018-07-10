@@ -25,4 +25,9 @@ class Creditario::ClientTest < Minitest::Test
     assert Creditario::Client.customers.is_a? Module
     assert_equal Creditario::Client.customers.to_s, "Creditario::Customers"
   end
+
+  def test_that_it_has_an_applications_repository
+    assert Creditario::Client.applications.is_a? Module
+    assert_equal Creditario::Client.applications.to_s, "Creditario::Applications"
+  end
 end
