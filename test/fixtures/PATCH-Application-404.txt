@@ -1,0 +1,14 @@
+HTTP/1.1 404 Not Found
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: fda4b2f9-516e-41f3-ba62-0b7b95e06777
+X-Runtime: 0.083309
+Transfer-Encoding: chunked
+
+{"errors":[{"type":"not_found","code":"ERR-404","message":"El Aplicación no existe.","href":"https://creditar.io/api/documentation"}]}

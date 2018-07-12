@@ -43,4 +43,81 @@ class Creditario::ApplicationsTest < CreditarioAPITest
     assert result.is_a? Hash
     assert result.has_key? "errors"
   end
+
+  def test_it_creates_an_application
+    stub_request(:post, build_api_uri("applications")).
+      with(headers: @headers).
+      to_return(use_fixture("POST-Application-201"))
+
+    create_application_params = {
+      customer_id: "eeedba2e-fc96-4f96-bd2e-bd046b256f96",
+      product_id: "c005b7f7-a44a-4ec0-bf7f-73d15d806fd9"
+    }
+
+    result = @subject.create(create_application_params)
+
+    assert result.is_a? Creditario::Application
+  end
+
+  def test_it_creates_an_application_fail
+    stub_request(:post, build_api_uri("applications")).
+      with(headers: @headers).
+      to_return(use_fixture("POST-Application-422"))
+
+    create_application_params = {
+      customer_id: "eeedba2e-fc96-4f96-bd2e-bd046b256f96",
+      product_id: "ff864c12-d3b7-45b5-8fb4-7fd4e5d42668" # Inactive Product
+    }
+
+    result = @subject.create(create_application_params)
+
+    assert result.is_a? Hash
+    assert result.has_key? "errors"
+  end
+
+  def test_it_updates_an_application
+    stub_request(:patch, build_api_uri("applications", "382aa3f2-aa2b-454c-940a-03aa711d0aec")).
+      with(headers: @headers).
+      to_return(use_fixture("PATCH-Application-202"))
+
+    application_params = {
+      street: "Wakanda",
+      city: "Black Panta",
+      interior_number: "78"
+    }
+
+    result = @subject.update("382aa3f2-aa2b-454c-940a-03aa711d0aec", application_params)
+
+    assert result.is_a? Creditario::Application
+  end
+
+  def test_it_updates_an_application_fail
+    stub_request(:patch, build_api_uri("applications", "382aa3f2-aa2b-454c-940a-03aa711d0aec")).
+      with(headers: @headers).
+      to_return(use_fixture("PATCH-Application-422"))
+
+    application_params = {
+      amount_cents: "invalid data"
+    }
+
+    result = @subject.update("382aa3f2-aa2b-454c-940a-03aa711d0aec", application_params)
+
+    assert result.is_a? Hash
+    assert result.has_key? "errors"
+  end
+
+  def test_it_updates_an_application_not_found
+    stub_request(:patch, build_api_uri("applications", "952aa3f2-aa2b-454c-940a-03aa711d0aec")).
+      with(headers: @headers).
+      to_return(use_fixture("PATCH-Application-404"))
+
+    application_params = {
+      street: "Wakanda Foreva"
+    }
+
+    result = @subject.update("952aa3f2-aa2b-454c-940a-03aa711d0aec", application_params)
+
+    assert result.is_a? Hash
+    assert result.has_key? "errors"
+  end
 end

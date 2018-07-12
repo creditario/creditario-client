@@ -59,6 +59,7 @@ module Creditario # :nodoc:
 
             request["Accept"] = "application/vnd.creditar.v#{Creditario::Client.api_version}+json"
             request["Authorization"] = "Token token=#{Creditario::Client.api_key}"
+            request["Content-Type"] = "application/json"
 
             request
           end
