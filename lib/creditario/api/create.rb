@@ -15,8 +15,7 @@ module Creditario # :nodoc:
       # Repositorio maneja.
       # De lo contrario, regresa un Hash con los errores arrojados por el servidor de creditar.io
       def create(**params)
-        wrapped_params = { self.attributes_wrapper => params }
-        response = API.request(:post, self.resource_path, wrapped_params)
+        response = API.request(:post, self.resource_path, params)
 
         attributes = response.dig("data").first
         links = response.dig("links")

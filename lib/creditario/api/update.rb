@@ -16,8 +16,7 @@ module Creditario # :nodoc:
       def update(id, params = {}, include_param = nil)
         path = [self.resource_path, id].join("/")
         path = include_param.nil? ? path : path + "?include=#{include_param}"
-        wrapped_params = { self.attributes_wrapper => params }
-        response = API.request(:patch, path, wrapped_params)
+        response = API.request(:patch, path, params)
 
         attributes = response.dig("data").first
         links = response.dig("links")

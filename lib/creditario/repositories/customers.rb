@@ -46,12 +46,5 @@ module Creditario # :nodoc:
     def self.resource_class
       Creditario::Customer
     end
-
-    ###
-    # Identificador a utilizar en peticiones POST y PATCH para envolver atributos
-    # de un Cliente.
-    def self.attributes_wrapper
-      :customer
-    end
   end
 end
