@@ -1,0 +1,14 @@
+HTTP/1.1 422 Unprocessable Entity
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: db2834e8-1135-4889-97f0-453fd716fa21
+X-Runtime: 0.013613
+Transfer-Encoding: chunked
+
+{"errors":[{"type":"blank","code":"ERR-100","message":"El correo no puede estar vacío.","href":"https://creditar.io/api/documentation#customers-customers-post"}]}

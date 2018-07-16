@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"e2fb30c462fd64928c856ba205393ffc"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 95d8d568-cba7-42e3-acfc-f5ff1a6ce5ef
+X-Runtime: 0.244048
+Transfer-Encoding: chunked
+
+{"data":[{"application_number":"IEQQDSGX-1","flow":null,"status":"Aprobado","amount_cents":100000,"approved_amount_cents":0,"street":"","exterior_number":"","interior_number":"","neighborhood":"","state":"","zipcode":"","home_phone":"","mobile_phone":"","classification":"","description":"","metadata":null,"rejected_notes":"","created_at":"2018-06-04T17:09:20.558-05:00","updated_at":"2018-06-06T13:12:24.143-05:00","rejected_at":"","approved_at":"","id":"3c8b46ce-a5f2-4f25-8280-a80551eacd21","product":{"id":"c005b7f7-a44a-4ec0-bf7f-73d15d806fd9"},"incomes":[{"id":"aee39305-f129-4c92-9813-0e90160cb05b"}],"expenses":[],"references":[]},{"application_number":"ARICIBOV-2","flow":null,"status":null,"amount_cents":0,"approved_amount_cents":0,"street":null,"exterior_number":null,"interior_number":null,"neighborhood":null,"state":null,"zipcode":null,"home_phone":null,"mobile_phone":null,"classification":null,"description":null,"metadata":null,"rejected_notes":null,"created_at":"2018-06-06T13:00:10.595-05:00","updated_at":"2018-06-19T20:51:52.206-05:00","rejected_at":"","approved_at":"","id":"0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a","product":{"id":"c005b7f7-a44a-4ec0-bf7f-73d15d806fd9"},"incomes":[{"id":"2ff8779b-ba6e-49f2-9be7-73ef20043d1c"},{"id":"3133b072-bb30-4235-992b-11ab1a814df7"}],"expenses":[],"references":[]}],"links":[{"rel":"self","uri":"/applications"}],"pagination":{"cursors":{"after":"0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a","next_uri":"/applications?cursor=0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a"}}}

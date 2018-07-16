@@ -23,15 +23,15 @@ module Creditario
     # Excepción arrojada cuando se intenta acceder a algún recurso
     # que no existe en creditar.io
     #
-    # Si se rescata esta excepción, se puede acceder a su atributo *response*
+    # Si se rescata esta excepción, se puede acceder a su atributo *server_response*
     # para obtener la respuesta de creditar.io
     class ResourceNotFoundError < StandardError
       ###
       # Contiene los detalles de la respuesta de creditar.io
-      attr_reader :response
+      attr_reader :server_response
 
       def initialize(response) # :nodoc:
-        @response = Oj.load(response.body)
+        @server_response = Oj.load(response.body)
         super(msg = "The resource does not exist")
       end
     end
@@ -40,16 +40,33 @@ module Creditario
     # Excepción arrojada cuando durante la creación o actualización
     # de algún recurso, se envían datos inválidos a creditar.io
     #
-    # Si se rescata esta excepción, se puede acceder a su atributo *response*
+    # Si se rescata esta excepción, se puede acceder a su atributo *server_response*
     # para obtener la respuesta de creditar.io
     class UnprocessableEntityError < StandardError
       ###
       # Contiene los detalles de la respuesta de creditar.io
-      attr_reader :response
+      attr_reader :server_response
 
       def initialize(response) # :nodoc:
-        @response = Oj.load(response.body)
+        @server_response = Oj.load(response.body)
         super(msg = "There are some validation issues")
+      end
+    end
+
+    ###
+    # Excepción arrojada cuando existen restricciones para crear o modificar un
+    # recurso en creditar.io
+    #
+    # Si se rescata esta excepción, se puede acceder a su atributo *server_response*
+    # para obtener la respuesta de creditar.io
+    class ForbiddenError < StandardError
+      ###
+      # Contiene los detalles de la respuesta de creditar.io
+      attr_reader :server_response
+
+      def initialize(response) # :nodoc:
+        @server_response = Oj.load(response.body)
+        super(msg = "There are restrictions on the resource")
       end
     end
   end

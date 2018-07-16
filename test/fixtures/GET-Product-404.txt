@@ -1,0 +1,14 @@
+HTTP/1.1 404 Not Found
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: 34ec0b29-de2e-4d51-9b1e-f4cc51a1599f
+X-Runtime: 0.143038
+Transfer-Encoding: chunked
+
+{"errors":[{"type":"not_found","code":"ERR-404","message":"El Producto no existe.","href":"https://creditar.io/api/documentation"}]}

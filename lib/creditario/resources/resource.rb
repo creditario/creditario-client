@@ -7,7 +7,7 @@ module Creditario # :nodoc:
   # Modulo que se encarga de establecer el mecanismo de inicialización de las siguientes clases:
   #
   # - Creditario::Customer
-  # - Creditario::CreditApplication
+  # - Creditario::Application
   # - Creditario::Product
   #
   module Resource

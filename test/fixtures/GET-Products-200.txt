@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"4692f96b09c7ba38809868b2dc640f80"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: b5cd9a74-0030-4f09-bc65-ae8f37f0139b
+X-Runtime: 0.044866
+Transfer-Encoding: chunked
+
+{"data":[{"short_name":"credi-car","name":"CrediAuto","default_amount_cents":0,"minimum_amount_cents":0,"maximum_amount_cents":0,"installments_number":0,"installments_minimum":0,"installments_maximum":0,"created_at":"2018-06-04T12:41:37.184-05:00","updated_at":"2018-06-19T20:51:36.318-05:00","id":"c005b7f7-a44a-4ec0-bf7f-73d15d806fd9","interest_rate":10.0},{"short_name":"credi-house","name":"CrediCasa","default_amount_cents":0,"minimum_amount_cents":0,"maximum_amount_cents":0,"installments_number":0,"installments_minimum":0,"installments_maximum":0,"created_at":"2018-06-04T12:41:37.218-05:00","updated_at":"2018-06-28T18:31:01.265-05:00","id":"ff864c12-d3b7-45b5-8fb4-7fd4e5d42668","interest_rate":0.0}],"links":[{"rel":"self","uri":"/products"}],"pagination":{"cursors":{"after":"ff864c12-d3b7-45b5-8fb4-7fd4e5d42668","next_uri":"/products?cursor=ff864c12-d3b7-45b5-8fb4-7fd4e5d42668"}}}
