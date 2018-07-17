@@ -76,7 +76,7 @@ module Creditario # :nodoc:
       end
 
       ###
-      # Método de acceso al repositorio de Aplicaciones.
+      # Método de acceso al repositorio de Solicitudes.
       #
       # Para más información, puedes consultar la documentación de Creditario::Applications
       def applications
