@@ -14,7 +14,7 @@ module Creditario # :nodoc:
       # Si todo sale bien devuelve una instancia del Recurso específico que el Repositorio maneja.
       # De lo contrario, regresa un Hash con los errores arrojados por el servidor de creditar.io
       def update(id, params = {}, include_param = nil)
-        path = [self.resource_path, id].join("/")
+        path = "#{self.resource_path}/#{id}"
         path = include_param.nil? ? path : path + "?include=#{include_param}"
         response = API.request(:patch, path, params)
 

@@ -15,7 +15,7 @@ module Creditario # :nodoc:
       # De lo contrario, el código de estado HTTP será diferente a 204 y la respuesta tendrá los detalles
       # del error.
       def delete(id)
-        path = [self.resource_path, id].join("/")
+        path = "#{self.resource_path}/#{id}"
         API.request(:delete, path)
       rescue Creditario::Exceptions::ResourceNotFoundError => exception
         exception.server_response
