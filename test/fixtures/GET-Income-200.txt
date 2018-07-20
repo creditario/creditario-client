@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"c3faf2b6a164a99cf83d67de0957e597"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 44fbc579-dbdf-4c94-b11a-16c278f9b350
+X-Runtime: 0.059529
+Transfer-Encoding: chunked
+
+{"data":[{"classification":"Renta de Inmueble","amount_cents":150000,"created_at":"2018-07-19T16:28:05.524-05:00","id":"78883027-713b-4ac0-be50-b8a67e7bf478"}],"links":[{"rel":"self","uri":"/incomes/78883027-713b-4ac0-be50-b8a67e7bf478"}]}
