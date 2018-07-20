@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"92699ba0c8b6705cf0027154a1984ec7"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 9e0a21f4-360f-489e-8c7c-25a55dd442c7
+X-Runtime: 0.214507
+Transfer-Encoding: chunked
+
+{"data":[{"resource":"customer","field":"attachment_type"},{"resource":"customer","field":"source"},{"resource":"expense","field":"classification"},{"resource":"income","field":"classification"},{"resource":"reference","field":"classification"},{"resource":"credit_application","field":"attachment_type"},{"resource":"credit_application","field":"status"},{"resource":"credit_application","field":"classification"}],"links":[{"rel":"self","uri":"/catalogs"}]}
