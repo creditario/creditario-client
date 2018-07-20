@@ -35,4 +35,19 @@ class Creditario::ClientTest < Minitest::Test
     assert Creditario::Client.catalogs.is_a? Module
     assert_equal Creditario::Client.catalogs.to_s, "Creditario::Catalogs"
   end
+
+  def test_that_it_has_an_incomes_repository
+    assert Creditario::Client.incomes.is_a? Module
+    assert_equal Creditario::Client.incomes.to_s, "Creditario::Incomes"
+  end
+
+  def test_that_it_has_an_expenses_repository
+    assert Creditario::Client.expenses.is_a? Module
+    assert_equal Creditario::Client.expenses.to_s, "Creditario::Expenses"
+  end
+
+  def test_that_it_has_a_references_repository
+    assert Creditario::Client.references.is_a? Module
+    assert_equal Creditario::Client.references.to_s, "Creditario::References"
+  end
 end

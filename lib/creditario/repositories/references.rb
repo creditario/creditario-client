@@ -25,6 +25,7 @@ module Creditario # :nodoc:
     extend Creditario::API::Retrieve
     extend Creditario::API::Create
     extend Creditario::API::Delete
+
     ###
     # Path de la API donde se ejecutan las peticiones para Referencias.
     def self.resource_path

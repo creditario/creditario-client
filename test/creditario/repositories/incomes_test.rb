@@ -52,6 +52,8 @@ class Creditario::IncomesTest < CreditarioAPITest
     stub_request(:delete, build_api_uri("incomes", "78883027-713b-4ac0-be50-b8a67e7bf478")).with(headers: @headers).
       to_return(use_fixture("DELETE-Income-204"))
 
-    @subject.delete("78883027-713b-4ac0-be50-b8a67e7bf478")
+    result = @subject.delete("78883027-713b-4ac0-be50-b8a67e7bf478")
+
+    assert_equal result.code, "204"
   end
 end
