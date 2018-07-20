@@ -7,19 +7,23 @@ module Creditario # :nodoc:
   autoload :Exceptions, "./lib/creditario/exceptions"
   autoload :API,        "./lib/creditario/api"
 
-  autoload :Resource,    "./lib/creditario/resources/resource"
-  autoload :Application, "./lib/creditario/resources/application"
-  autoload :Customer,    "./lib/creditario/resources/customer"
-  autoload :Expense,     "./lib/creditario/resources/expense"
-  autoload :Income,      "./lib/creditario/resources/income"
-  autoload :Product,     "./lib/creditario/resources/product"
-  autoload :Reference,   "./lib/creditario/resources/reference"
+  autoload :Resource,     "./lib/creditario/resources/resource"
+  autoload :Application,  "./lib/creditario/resources/application"
+  autoload :Customer,     "./lib/creditario/resources/customer"
+  autoload :Expense,      "./lib/creditario/resources/expense"
+  autoload :Income,       "./lib/creditario/resources/income"
+  autoload :Product,      "./lib/creditario/resources/product"
+  autoload :Reference,    "./lib/creditario/resources/reference"
+  autoload :Catalog,      "./lib/creditario/resources/catalog"
+  autoload :CatalogValue, "./lib/creditario/resources/catalog"
 
   autoload :Applications, "./lib/creditario/repositories/applications"
   autoload :Customers,    "./lib/creditario/repositories/customers"
   autoload :Products,     "./lib/creditario/repositories/products"
+  autoload :Catalogs,     "./lib/creditario/repositories/catalogs"
 
   autoload :PaginatedCollection, "./lib/creditario/utils/paginated_collection"
+  autoload :ResourcesCollection, "./lib/creditario/utils/resources_collection"
 
   ###
   # == Creditario::Client
@@ -81,6 +85,14 @@ module Creditario # :nodoc:
       # Para más información, puedes consultar la documentación de Creditario::Applications
       def applications
         Creditario::Applications
+      end
+
+      ###
+      # Método de acceso al repositorio de Catálogos.
+      #
+      # Para más información, puedes consultar la documentación de Creditario::Catalogs
+      def catalogs
+        Creditario::Catalogs
       end
     end
   end

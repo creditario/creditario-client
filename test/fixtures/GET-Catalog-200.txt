@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"d91d0c14a75e65a2127b2a03c59483a5"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: c0db9a35-e274-4436-bc74-e342cd125483
+X-Runtime: 0.011430
+Transfer-Encoding: chunked
+
+{"data":[{"name":"Revista","value":"Revista"},{"name":"Redes Sociales","value":"Redes Socialez"},{"name":"Facebook","value":"Facebook"}],"links":[{"rel":"self","uri":"/catalog?resource=customer\u0026field=source"}]}

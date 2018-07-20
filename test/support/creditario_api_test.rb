@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "uri"
+
 class CreditarioAPITest < Minitest::Test
   def setup
     Creditario::Client.api_key = "BMBE96Wva8NaYMmVx4RavpXSy6Y6HKFe"
@@ -13,8 +15,14 @@ class CreditarioAPITest < Minitest::Test
       File.open(fixture_path)
     end
 
-    def build_api_uri(*parts)
+    def build_api_uri(*parts, **query_params)
+      query_string = URI.encode_www_form(query_params) unless query_params.empty?
       parts.unshift(Creditario::Client.api_base)
-      parts.join("/")
+
+      if query_string
+        parts.compact.join("/") + "?#{query_string}"
+      else
+        parts.compact.join("/")
+      end
     end
 end

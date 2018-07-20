@@ -70,7 +70,7 @@ class FixtureAPIResponse # :nodoc:
     end
 
     def request_url
-      "-is localhost:#{port}#{path}"
+      "'localhost:#{port}#{path}'"
     end
 
     def headers
@@ -89,18 +89,18 @@ class FixtureAPIResponse # :nodoc:
     end
 
     def get
-      "curl -X GET #{request_url} #{headers}"
+      "curl -X GET -is #{request_url} #{headers}"
     end
 
     def post
-      "curl -X POST #{request_url} #{headers} #{body}"
+      "curl -X POST -is #{request_url} #{headers} #{body}"
     end
 
     def patch
-      "curl -X PATCH #{request_url} #{headers} #{body}"
+      "curl -X PATCH -is #{request_url} #{headers} #{body}"
     end
 
     def delete
-      "curl -X DELETE #{request_url} #{headers}"
+      "curl -X DELETE -is #{request_url} #{headers}"
     end
 end
