@@ -16,7 +16,7 @@ module Creditario # :nodoc:
       # del error.
       def delete(id)
         path = "#{self.resource_path}/#{id}"
-        API.request(:delete, path)
+        API.request(:delete, path).code == "204"
       rescue Creditario::Exceptions::ResourceNotFoundError => exception
         exception.server_response
       end

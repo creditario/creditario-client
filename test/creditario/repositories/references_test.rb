@@ -53,8 +53,6 @@ class Creditario::ReferencesTest < CreditarioAPITest
     stub_request(:delete, build_api_uri("references", "78883027-713b-4ac0-be50-b8a67e7bf478")).with(headers: @headers).
       to_return(use_fixture("DELETE-Reference-204"))
 
-    result = @subject.delete("78883027-713b-4ac0-be50-b8a67e7bf478")
-
-    assert_equal result.code, "204"
+    assert @subject.delete("78883027-713b-4ac0-be50-b8a67e7bf478")
   end
 end
