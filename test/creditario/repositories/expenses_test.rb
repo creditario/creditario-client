@@ -52,6 +52,8 @@ class Creditario::ExpensesTest < CreditarioAPITest
     stub_request(:delete, build_api_uri("expenses", "a1e4a3d7-db86-4ab3-9b2d-cddafd97505c")).with(headers: @headers).
       to_return(use_fixture("DELETE-Expense-204"))
 
-    @subject.delete("a1e4a3d7-db86-4ab3-9b2d-cddafd97505c")
+    result = @subject.delete("a1e4a3d7-db86-4ab3-9b2d-cddafd97505c")
+
+    assert_equal result.code, "204"
   end
 end
