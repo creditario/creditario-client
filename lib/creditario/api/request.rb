@@ -35,6 +35,8 @@ module Creditario # :nodoc:
           end
 
           handle_exceptions(response)
+
+          return response if response.body.nil?
           Oj.load(response.body)
         end
 

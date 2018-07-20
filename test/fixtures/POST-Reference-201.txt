@@ -1,0 +1,15 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"8962ed56ea7f00ee0b8bc895bb203dde"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 9fb537a0-44cb-4b24-8709-ae4cc7e3bd65
+X-Runtime: 0.069169
+Transfer-Encoding: chunked
+
+{"data":[{"classification":"Familiar","name":"Morty","phone":"3129873452","created_at":"2018-07-20T01:21:37.687-05:00","id":"54681998-9dc3-4112-9bda-ca989dce0c32"}],"links":[{"rel":"self","uri":"/references/54681998-9dc3-4112-9bda-ca989dce0c32"}]}

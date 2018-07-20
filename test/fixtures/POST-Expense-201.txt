@@ -1,0 +1,15 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"1df0a25dbd0ab7ccb5ee3517926d1a8c"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 80f81f42-daff-4a31-9320-0bba112b6380
+X-Runtime: 0.240840
+Transfer-Encoding: chunked
+
+{"data":[{"classification":"Renta","amount_cents":25000,"created_at":"2018-07-20T00:43:40.598-05:00","id":"3cc00748-f6b4-45dd-a8a6-5cfa253bffbd"}],"links":[{"rel":"self","uri":"/expenses/3cc00748-f6b4-45dd-a8a6-5cfa253bffbd"}]}

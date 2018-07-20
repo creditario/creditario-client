@@ -21,6 +21,9 @@ module Creditario # :nodoc:
   autoload :Customers,    "./lib/creditario/repositories/customers"
   autoload :Products,     "./lib/creditario/repositories/products"
   autoload :Catalogs,     "./lib/creditario/repositories/catalogs"
+  autoload :Incomes,      "./lib/creditario/repositories/incomes"
+  autoload :Expenses,     "./lib/creditario/repositories/expenses"
+  autoload :References,   "./lib/creditario/repositories/references"
 
   autoload :PaginatedCollection, "./lib/creditario/utils/paginated_collection"
   autoload :ResourcesCollection, "./lib/creditario/utils/resources_collection"
@@ -93,6 +96,29 @@ module Creditario # :nodoc:
       # Para más información, puedes consultar la documentación de Creditario::Catalogs
       def catalogs
         Creditario::Catalogs
+      end
+
+      # Método de acceso al repositorio de Ingresos.
+      #
+      # Para más información, puedes consultar la documentación de Creditario::Incomes
+      def incomes
+        Creditario::Incomes
+      end
+
+      ###
+      # Método de acceso al repositorio de Egresos.
+      #
+      # Para más información, puedes consultar la documentación de Creditario::Expenses
+      def expenses
+        Creditario::Expenses
+      end
+
+      ###
+      # Método de acceso al repositorio de Referencias.
+      #
+      # Para más información, puedes consultar la documentación de Creditario::References
+      def references
+        Creditario::References
       end
     end
   end
