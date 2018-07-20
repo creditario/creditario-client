@@ -1,0 +1,15 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"0437aa6903354107e8c48f23ebc147ca"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: f62d66fc-c7a2-4c39-8355-87440c045c51
+X-Runtime: 0.105751
+Transfer-Encoding: chunked
+
+{"data":[{"classification":"Trabajo","amount_cents":450000,"created_at":"2018-07-19T20:55:26.139-05:00","id":"210e8aac-0330-4753-b06b-14b95a3c2a79"}],"links":[{"rel":"self","uri":"/incomes/210e8aac-0330-4753-b06b-14b95a3c2a79"}]}

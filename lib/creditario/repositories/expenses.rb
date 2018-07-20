@@ -21,7 +21,7 @@ module Creditario # :nodoc:
   #
   #     result = Creditario::Expenses.delete("eeedba2e-fc96-4f96-bd2e-bd046b256f96")
   #     => Creditario::Expense
-  module Applications
+  module Expenses
     extend Creditario::API::Retrieve
     extend Creditario::API::Create
     extend Creditario::API::Delete

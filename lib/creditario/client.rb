@@ -21,6 +21,9 @@ module Creditario # :nodoc:
   autoload :Customers,    "./lib/creditario/repositories/customers"
   autoload :Products,     "./lib/creditario/repositories/products"
   autoload :Catalogs,     "./lib/creditario/repositories/catalogs"
+  autoload :Incomes,      "./lib/creditario/repositories/incomes"
+  autoload :Expenses      "./lib/creditario/repositories/expenses"
+  autoload :References,   "./lib/creditario/repositories/references"
 
   autoload :PaginatedCollection, "./lib/creditario/utils/paginated_collection"
   autoload :ResourcesCollection, "./lib/creditario/utils/resources_collection"

@@ -21,7 +21,7 @@ module Creditario # :nodoc:
   #
   #     result = Creditario::References.delete("0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a")
   #     => Creditario::Referencia
-  module Applications
+  module References
     extend Creditario::API::Retrieve
     extend Creditario::API::Create
     extend Creditario::API::Delete

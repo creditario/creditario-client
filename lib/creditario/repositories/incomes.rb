@@ -21,7 +21,7 @@ module Creditario # :nodoc:
   #
   #     result = Creditario::Incomes.delete("0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a")
   #     => Creditario::Income
-  module Applications
+  module Incomes
     extend Creditario::API::Retrieve
     extend Creditario::API::Create
     extend Creditario::API::Delete
