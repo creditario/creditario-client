@@ -5,7 +5,13 @@ require "oj"
 require "creditario/client/version"
 
 require "creditario/exceptions"
-require "creditario/api"
+
+require "creditario/api/request"
+require "creditario/api/create"
+require "creditario/api/delete"
+require "creditario/api/list"
+require "creditario/api/retrieve"
+require "creditario/api/update"
 
 require "creditario/utils/paginated_collection"
 require "creditario/utils/resources_collection"
