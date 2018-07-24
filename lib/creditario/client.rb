@@ -2,32 +2,32 @@
 
 require "oj"
 
+require "creditario/client/version"
+
+require "creditario/exceptions"
+require "creditario/api"
+
+require "creditario/utils/paginated_collection"
+require "creditario/utils/resources_collection"
+
+require "creditario/resources/resource"
+require "creditario/resources/product"
+require "creditario/resources/expense"
+require "creditario/resources/income"
+require "creditario/resources/reference"
+require "creditario/resources/application"
+require "creditario/resources/customer"
+require "creditario/resources/catalog"
+
+require "creditario/repositories/applications"
+require "creditario/repositories/customers"
+require "creditario/repositories/products"
+require "creditario/repositories/catalogs"
+require "creditario/repositories/incomes"
+require "creditario/repositories/expenses"
+require "creditario/repositories/references"
+
 module Creditario # :nodoc:
-  autoload :Version,    ".lib/creditario/version"
-  autoload :Exceptions, "./lib/creditario/exceptions"
-  autoload :API,        "./lib/creditario/api"
-
-  autoload :Resource,     "./lib/creditario/resources/resource"
-  autoload :Application,  "./lib/creditario/resources/application"
-  autoload :Customer,     "./lib/creditario/resources/customer"
-  autoload :Expense,      "./lib/creditario/resources/expense"
-  autoload :Income,       "./lib/creditario/resources/income"
-  autoload :Product,      "./lib/creditario/resources/product"
-  autoload :Reference,    "./lib/creditario/resources/reference"
-  autoload :Catalog,      "./lib/creditario/resources/catalog"
-  autoload :CatalogValue, "./lib/creditario/resources/catalog"
-
-  autoload :Applications, "./lib/creditario/repositories/applications"
-  autoload :Customers,    "./lib/creditario/repositories/customers"
-  autoload :Products,     "./lib/creditario/repositories/products"
-  autoload :Catalogs,     "./lib/creditario/repositories/catalogs"
-  autoload :Incomes,      "./lib/creditario/repositories/incomes"
-  autoload :Expenses,     "./lib/creditario/repositories/expenses"
-  autoload :References,   "./lib/creditario/repositories/references"
-
-  autoload :PaginatedCollection, "./lib/creditario/utils/paginated_collection"
-  autoload :ResourcesCollection, "./lib/creditario/utils/resources_collection"
-
   ###
   # == Creditario::Client
   # Modulo que será utilizado para consumir la API de creditar.io
