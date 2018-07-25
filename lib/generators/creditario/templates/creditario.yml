@@ -1,0 +1,12 @@
+default: &default
+  api_base: <%= ENV["CREDITARIO_API_URL"] || "http://localhost:3000" %>
+  api_key: <%= Rails.application.credentials.dig(:creditario, Rails.env.to_sym, :api_key) %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
