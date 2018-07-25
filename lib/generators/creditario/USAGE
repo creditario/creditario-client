@@ -1,0 +1,13 @@
+Description:
+    Crea el initializer de Creditario::Client y además añade un archivo YAML de configuración
+    para poder tener `api_key` y `api_base` diferentes por entorno.
+
+Example:
+    rails generate creditario:install
+
+    Va a crear lo siguiente:
+      - config/initializers/creditario.rb
+      - config/creditario.yml
+
+    Va a modificar:
+      - config/application.rb

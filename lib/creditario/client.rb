@@ -3,6 +3,7 @@
 require "oj"
 
 require "creditario/client/version"
+require "creditario/client/railtie" if defined?(Rails)
 
 require "creditario/exceptions"
 

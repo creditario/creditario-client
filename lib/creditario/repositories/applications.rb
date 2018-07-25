@@ -28,7 +28,7 @@ module Creditario # :nodoc:
   # - Actualizar una Solicitud:
   #
   #     result = Creditario::Applications.update("c0324939-0802-41b2-b81e-04e8982270ec", { street: "Avenida Siempre Viva", exterior_number: "742" })
-  #     => Creditario::Customer
+  #     => Creditario::Application
   module Applications
     extend Creditario::API::List
     extend Creditario::API::Retrieve
