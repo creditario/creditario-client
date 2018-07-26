@@ -1,0 +1,15 @@
+HTTP/1.1 401 Unauthorized
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+WWW-Authenticate: Token realm="Application"
+Content-Type: text/plain; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: e7eb065d-fef1-4ded-97e1-bee945394bf0
+X-Runtime: 0.161902
+Transfer-Encoding: chunked
+
+HTTP Token: Access denied.

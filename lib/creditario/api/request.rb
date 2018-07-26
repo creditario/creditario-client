@@ -34,10 +34,16 @@ module Creditario # :nodoc:
             http.request(request)
           end
 
-          handle_exceptions(response)
+          handle_errored_responses(response)
 
           return response if response.body.nil?
           Oj.load(response.body)
+        rescue Oj::ParseError => ex
+          raise Exceptions::InvalidResponseBodyError, ex.message
+        rescue Net::OpenTimeout => ex
+          raise Exceptions::APIBusyError, ex.message
+        rescue Errno::ECONNREFUSED => ex
+          raise Exceptions::APINotReachableError, ex.message
         end
 
         private
@@ -57,7 +63,7 @@ module Creditario # :nodoc:
           end
 
           def set_request_headers(request)
-            raise Creditario::Exceptions::APIKeyError.new if Creditario::Client.api_key.nil?
+            raise Creditario::Exceptions::MissingAPIKeyError.new if Creditario::Client.api_key.nil?
 
             request["Accept"] = "application/vnd.creditar.v#{Creditario::Client.api_version}+json"
             request["Authorization"] = "Token token=#{Creditario::Client.api_key}"
@@ -71,9 +77,10 @@ module Creditario # :nodoc:
             request
           end
 
-          def handle_exceptions(response)
+          def handle_errored_responses(response)
             return if response.code.to_i < 400
 
+            raise Exceptions::InvalidAPIKeyError if response.code == "401"
             raise Exceptions::ForbiddenError.new(response) if response.code == "403"
             raise Exceptions::ResourceNotFoundError.new(response) if response.code == "404"
             raise Exceptions::UnprocessableEntityError.new(response) if response.code == "422"
