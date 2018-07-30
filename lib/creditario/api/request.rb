@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "net/http"
+require "net/http/post/multipart"
 
 module Creditario # :nodoc:
   module API # :nodoc:
@@ -26,6 +27,7 @@ module Creditario # :nodoc:
         # - :post
         # - :delete
         # - :patch
+        # - :multipart
         def request(method, path, params = {})
           uri = URI(Creditario::Client.api_base + path)
           request = request_from_method(method, uri, params)
@@ -55,6 +57,8 @@ module Creditario # :nodoc:
               set_request_headers(Net::HTTP::Get.new(uri))
             when :post
               set_request_body(set_request_headers(Net::HTTP::Post.new(uri)), params)
+            when :multipart
+              set_authorization_headers(Net::HTTP::Post::Multipart.new(uri, params))
             when :delete
               set_request_headers(Net::HTTP::Delete.new(uri))
             when :patch
@@ -63,12 +67,18 @@ module Creditario # :nodoc:
           end
 
           def set_request_headers(request)
-            raise Creditario::Exceptions::MissingAPIKeyError.new if Creditario::Client.api_key.nil?
+            request = set_authorization_headers(request)
 
             request["Accept"] = "application/vnd.creditar.v#{Creditario::Client.api_version}+json"
-            request["Authorization"] = "Token token=#{Creditario::Client.api_key}"
             request["Content-Type"] = "application/json"
 
+            request
+          end
+
+          def set_authorization_headers(request)
+            raise Creditario::Exceptions::MissingAPIKeyError.new if Creditario::Client.api_key.nil?
+
+            request["Authorization"] = "Token token=#{Creditario::Client.api_key}"
             request
           end
 

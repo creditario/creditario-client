@@ -10,6 +10,13 @@ class CreditarioAPITest < Minitest::Test
 
   private
 
+    def image_fixture
+      tempfile = Tempfile.new("image.jpg")
+      tempfile.write("Hello World")
+      tempfile.rewind
+      tempfile
+    end
+
     def use_fixture(filename, extension = "txt")
       fixture_path = File.join(".", "test", "fixtures", [filename, extension].join("."))
       File.open(fixture_path)

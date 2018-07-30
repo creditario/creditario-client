@@ -32,6 +32,17 @@ class Creditario::API::RequestTest < CreditarioAPITest
     assert_requested :post, build_api_uri("customers")
   end
 
+  def test_that_it_make_post_multipart_request
+    @headers.delete("Accept")
+    stub_request(:post, build_api_uri("attachments")).
+      with(headers: @headers).
+      to_return(status: 201, body: "{}")
+
+    @subject.request(:multipart, "/attachments")
+
+    assert_requested :post, build_api_uri("attachments")
+  end
+
   def test_that_it_make_patch_request
     stub_request(:patch, build_api_uri("customers", "eeedba2e-fc96-4f96-bd2e-bd046b256f96")).
       with(headers: @headers).
