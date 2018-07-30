@@ -9,6 +9,7 @@ require "creditario/exceptions"
 
 require "creditario/api/request"
 require "creditario/api/create"
+require "creditario/api/multipart"
 require "creditario/api/delete"
 require "creditario/api/list"
 require "creditario/api/retrieve"
@@ -25,6 +26,7 @@ require "creditario/resources/reference"
 require "creditario/resources/application"
 require "creditario/resources/customer"
 require "creditario/resources/catalog"
+require "creditario/resources/attachment"
 
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"
@@ -33,6 +35,7 @@ require "creditario/repositories/catalogs"
 require "creditario/repositories/incomes"
 require "creditario/repositories/expenses"
 require "creditario/repositories/references"
+require "creditario/repositories/attachments"
 
 module Creditario # :nodoc:
   ###
@@ -126,6 +129,14 @@ module Creditario # :nodoc:
       # Para más información, puedes consultar la documentación de Creditario::References
       def references
         Creditario::References
+      end
+
+      ###
+      # Método de acceso al repositorio de Archivos.
+      #
+      # Para más información, puede consultar la documentación de Creditario::Attachments
+      def attachments
+        Creditario::Attachments
       end
     end
   end

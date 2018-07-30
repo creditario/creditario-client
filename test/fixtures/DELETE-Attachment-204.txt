@@ -1,0 +1,11 @@
+HTTP/1.1 204 No Content
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Cache-Control: no-cache
+X-Request-Id: 45285e4a-46f9-4dd0-bd8f-abae20fa377d
+X-Runtime: 0.050785
+

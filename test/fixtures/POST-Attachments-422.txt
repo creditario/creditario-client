@@ -1,0 +1,16 @@
+HTTP/1.1 100 Continue
+
+HTTP/1.1 422 Unprocessable Entity
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/json; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: 2bc9c9a2-df47-4fd3-af4e-99b210a03d44
+X-Runtime: 0.026605
+Transfer-Encoding: chunked
+
+{"errors":[{"type":"blank","code":"ERR-172","message":"El tipo de documento no debe estar vacío.","href":"https://www.creditar.io/api/documentation#err-172"}]}
