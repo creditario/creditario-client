@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"10856e81e7d62c0beed6936680f24fd6"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: ddecdcfa-201d-4fd2-af4c-0c0d37768ca9
+X-Runtime: 0.161170
+Transfer-Encoding: chunked
+
+{"data":[{"body":"\u003cp\u003esdasd\u003c/p\u003e\n","id":"a387e679-060f-438a-836c-c1bc407a41ac"}],"links":[{"rel":"self","uri":"/contracts/a387e679-060f-438a-836c-c1bc407a41ac"}]}

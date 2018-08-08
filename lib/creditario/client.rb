@@ -20,6 +20,7 @@ require "creditario/utils/resources_collection"
 
 require "creditario/resources/resource"
 require "creditario/resources/product"
+require "creditario/resources/contract"
 require "creditario/resources/expense"
 require "creditario/resources/income"
 require "creditario/resources/reference"
@@ -31,6 +32,7 @@ require "creditario/resources/attachment"
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"
 require "creditario/repositories/products"
+require "creditario/repositories/contracts"
 require "creditario/repositories/catalogs"
 require "creditario/repositories/incomes"
 require "creditario/repositories/expenses"
@@ -98,6 +100,14 @@ module Creditario # :nodoc:
       # Para más información, puedes consultar la documentación de Creditario::Applications
       def applications
         Creditario::Applications
+      end
+
+      ###
+      # Método de acesso al repositorio de Contratos.
+      #
+      # Para más información, puedes consultrar la documentación de Creditario::Contracts
+      def contracts
+        Creditario::Contracts
       end
 
       ###
