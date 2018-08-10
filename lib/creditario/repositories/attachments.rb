@@ -14,7 +14,16 @@ module Creditario # :nodoc:
   #
   # - Crear un Archivo:
   #
-  #     result = Creditario::Attachments.create(attachmentable_type: "credit_application", attachmentable_id: "4e9ece5f-d4e6-4fcd-bc9b-b437bef23ceb", attachment_type: "INE", file: File.new("@/path/to/a/file.jpg"))
+  #   Nota: Para el envío del archivo es necesario utilizar la clase +UploadIO.new+.
+  #
+  #     file_upload_io = UploadIO.new(File.new("@/path/to/a/file.jpg"), "image/jpg", "file.jpg")
+  #
+  #     result = Creditario::Attachments.create(
+  #       attachmentable_type: "credit_application",
+  #       attachmentable_id: "4e9ece5f-d4e6-4fcd-bc9b-b437bef23ceb",
+  #       attachment_type: "INE",
+  #       file: file_upload_io
+  #     )
   #     => Creditario::Attachment
   #
   # - Eliminar un Archivo:
