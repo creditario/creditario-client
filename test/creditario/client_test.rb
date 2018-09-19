@@ -60,4 +60,9 @@ class Creditario::ClientTest < Minitest::Test
     assert Creditario::Client.attachments.is_a? Module
     assert_equal Creditario::Client.attachments.to_s, "Creditario::Attachments"
   end
+
+  def test_that_it_has_a_credit_estimates_repository
+    assert Creditario::Client.credit_estimates.is_a? Module
+    assert_equal Creditario::Client.credit_estimates.to_s, "Creditario::CreditEstimates"
+  end
 end

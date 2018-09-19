@@ -14,7 +14,8 @@ module Creditario # :nodoc:
       # Si todo sale bien devuelve una instancia del Recurso específico que el Repositorio maneja.
       # De lo contrario, regresa un Hash con los errores arrojados por el servidor de creditar.io
       def retrieve(id, query_params = {})
-        path = "#{self.resource_path}/#{id}"
+        parts = [self.resource_path, id]
+        path = parts.compact.join("/")
         response = API.request(:get, path, query_params)
 
         attributes = response.dig("data").first
@@ -22,6 +23,8 @@ module Creditario # :nodoc:
 
         self.resource_class.new(attributes, links)
       rescue Creditario::Exceptions::ResourceNotFoundError => exception
+        exception.server_response
+      rescue Creditario::Exceptions::UnprocessableEntityError => exception
         exception.server_response
       end
     end
