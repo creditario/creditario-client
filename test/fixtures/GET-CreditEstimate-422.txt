@@ -1,0 +1,14 @@
+HTTP/1.1 422 Unprocessable Entity
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: cf9f9895-2530-4a1d-ae56-c048e06746f6
+X-Runtime: 0.007663
+Transfer-Encoding: chunked
+
+{"errors":[{"type":"missing_parameters","code":"ERR-001","message":"Hicieron falta parametros en la petición, revisa la documentación del recurso en especifico al que intentas acceder.","href":"https://www.creditar.io/api/documentation#err-001"}]}

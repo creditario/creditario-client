@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"31aab954acb62c43b6b9bb2e3d47fbab"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 9a2e2bb9-bebd-415a-afa6-ea390e2aa2a5
+X-Runtime: 0.018691
+Transfer-Encoding: chunked
+
+{"data":[{"total_interest_amount_cents":1800000,"total_credit_amount_cents":11800000}],"links":[{"rel":"self","uri":"/credit_estimates?amount_cents=10000000\u0026installments_number=12\u0026product_id=47a6377f-3939-4736-87e3-aad48b4c882c"}]}
