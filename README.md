@@ -185,12 +185,12 @@ Las operaciones que puedes realizar sobre Referencias son: obtener, crear y elim
 #### Obtener una Referencia
 
     Creditario::References.retrieve("0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a")
-    => Creditario::Referencia
+    => Creditario::Reference
 
 #### Crear una Referencia
 
     result = Creditario::References.create(classification: "Amistad", name: "Diane Nguyen", phone: "3129743789", credit_application_id: "636264b1-77a2-45ef-b643-e44cfbc84d40")
-    => Creditario::Referencia
+    => Creditario::Reference
 
 #### Eliminar una Referencia
 
@@ -213,3 +213,12 @@ Las operaciones que puedes realizar sobre Catálogos son: listar y obtener.
 
     Creditario::Catalog.retrieve(resource: "customer", field: "source")
     => Creditario::ResourcesCollection
+
+### Estimaciones de Crédito
+
+La operación que puedes realizar sobre Estimaciones de Crédito es: obtener.
+
+#### Obtener una Estimación de Crédito
+
+    result = Creditario::CreditEstimates.retrieve(nil, product_id: "c005b7f7-a44a-4ec0-bf7f-73d15d806fd9", amount_cents: "5000000", installments_number: "12")
+    => Creditario::CreditEstimate
