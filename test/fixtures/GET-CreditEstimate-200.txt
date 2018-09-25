@@ -6,10 +6,10 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.creditar.v1+json; charset=utf-8
-ETag: W/"31aab954acb62c43b6b9bb2e3d47fbab"
+ETag: W/"5d8b22224a04b90cea088486e4514bd7"
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 9a2e2bb9-bebd-415a-afa6-ea390e2aa2a5
-X-Runtime: 0.018691
+X-Request-Id: be985f82-73c5-4ef7-8df4-d18f5da9ab09
+X-Runtime: 0.023634
 Transfer-Encoding: chunked
 
-{"data":[{"total_interest_amount_cents":1800000,"total_credit_amount_cents":11800000}],"links":[{"rel":"self","uri":"/credit_estimates?amount_cents=10000000\u0026installments_number=12\u0026product_id=47a6377f-3939-4736-87e3-aad48b4c882c"}]}
+{"data":[{"total_interest_amount_cents":1800000,"total_credit_amount_cents":11800000,"installment_plan":[{"number":1,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":91666.67},{"number":2,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":83333.34},{"number":3,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":75000.01},{"number":4,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":66666.68},{"number":5,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":58333.35},{"number":6,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":50000.02},{"number":7,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":41666.69},{"number":8,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":33333.36},{"number":9,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":25000.03},{"number":10,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":16666.7},{"number":11,"total_payment":9833.33,"principal":8333.33,"interest":1500.0,"ending_balance":8333.37},{"number":12,"total_payment":9833.37,"principal":8333.37,"interest":1500.0,"ending_balance":0}]}],"links":[{"rel":"self","uri":"/credit_estimates?amount_cents=10000000\u0026installments_number=12\u0026product_id=8f730675-0d34-45f3-bfcf-3ff75c53a0fb"}]}
