@@ -2,14 +2,14 @@
 
 module Creditario # :nodoc:
   ###
-  # == Creditario::Estimates
+  # == Creditario::CreditEstimates
   #
   # Repositorio de Estimaciones de Crédito, permite obtener una Estimación de Crédito
   # en base a un Producto de creditar.io:
   #
   # - Obtener una Estimación:
   #
-  #     Creditario::Estimates.retrieve(nil, product_id: "c005b7f7-a44a-4ec0-bf7f-73d15d806fd9", amount_cents: 1000000, installments_number: 12)
+  #     Creditario::CreditEstimates.retrieve(nil, product_id: "c005b7f7-a44a-4ec0-bf7f-73d15d806fd9", amount_cents: 1000000, installments_number: 12)
   #     => Creditario::CreditEstimate
   module CreditEstimates
     extend Creditario::API::Retrieve
