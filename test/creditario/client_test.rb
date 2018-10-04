@@ -65,4 +65,9 @@ class Creditario::ClientTest < Minitest::Test
     assert Creditario::Client.credit_estimates.is_a? Module
     assert_equal Creditario::Client.credit_estimates.to_s, "Creditario::CreditEstimates"
   end
+
+  def test_that_it_has_a_credits_repository
+    assert Creditario::Client.credits.is_a? Module
+    assert_equal Creditario::Client.credits.to_s, "Creditario::Credits"
+  end
 end

@@ -29,6 +29,7 @@ require "creditario/resources/application"
 require "creditario/resources/customer"
 require "creditario/resources/catalog"
 require "creditario/resources/attachment"
+require "creditario/resources/credit"
 
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"
@@ -40,6 +41,7 @@ require "creditario/repositories/incomes"
 require "creditario/repositories/expenses"
 require "creditario/repositories/references"
 require "creditario/repositories/attachments"
+require "Creditario/repositories/credits"
 
 module Creditario # :nodoc:
   ###
@@ -157,6 +159,14 @@ module Creditario # :nodoc:
       # Para más información, puede consultar la documentación de Creditario::CreditEstimates
       def credit_estimates
         Creditario::CreditEstimates
+      end
+
+      ###
+      # Método de acceso al repositorio de Créditos
+      #
+      # Para más información, puede consultar la documentación de Creditario::Credits
+      def credits
+        Creditario::Credits
       end
     end
   end

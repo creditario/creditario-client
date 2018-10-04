@@ -222,3 +222,20 @@ La operación que puedes realizar sobre Estimaciones de Crédito es: obtener.
 
     result = Creditario::CreditEstimates.retrieve(nil, product_id: "c005b7f7-a44a-4ec0-bf7f-73d15d806fd9", amount_cents: "5000000", installments_number: "12")
     => Creditario::CreditEstimate
+
+### Créditos
+
+Las operaciones que puedes realizar sobre Créditos son: listar y obtener.
+
+#### Listar Créditos de un Cliente
+
+    result = Creditario::Credits.list(customer_id: "f916636d-e045-43e4-898d-14e6dddf13f9")
+    => Creditario::ResourcesCollection
+
+    result.items
+    => [Creditario::Credit, Creditario::Credit, ...]
+
+#### Obtener un Crédito
+
+    result = Creditario::Credits.retrieve("33ca13b7-9910-430c-b5d7-7ba12a9b18a5")
+    => Creditario::Credit
