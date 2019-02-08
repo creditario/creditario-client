@@ -1,0 +1,23 @@
+image: registry.michelada.io/financial/creditario-client/ci
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - vendor/ruby
+
+before_script:
+  - gem install bundler
+  - bundle install -j $(nproc) --path vendor
+
+# the 'pages' job will deploy and build your site to the 'public' path
+pages:
+  stage: deploy
+  script:
+    - bundle exec rake rdoc
+    - mv doc public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master # this job will affect only the 'master' branch
+
