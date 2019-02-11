@@ -13,7 +13,7 @@ before_script:
 pages:
   stage: deploy
   script:
-    - bundle exec rake rdoc
+    - bundle exec sdoc . -T rails --exclude="vendor/|test/"
     - mv doc public
   artifacts:
     paths:
