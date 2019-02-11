@@ -1,0 +1,18 @@
+current directory: /Users/fernandop/Workspace/financial/creditario-client/vendor/ruby/2.4.0/gems/jaro_winkler-1.5.2/ext/jaro_winkler
+/Users/fernandop/.rvm/rubies/ruby-2.4.5/bin/ruby -r ./siteconf20190211-32170-lfkhqr.rb extconf.rb
+creating Makefile
+
+current directory: /Users/fernandop/Workspace/financial/creditario-client/vendor/ruby/2.4.0/gems/jaro_winkler-1.5.2/ext/jaro_winkler
+make "DESTDIR=" clean
+
+current directory: /Users/fernandop/Workspace/financial/creditario-client/vendor/ruby/2.4.0/gems/jaro_winkler-1.5.2/ext/jaro_winkler
+make "DESTDIR="
+compiling adj_matrix.c
+compiling codepoints.c
+compiling jaro.c
+compiling jaro_winkler.c
+linking shared-object jaro_winkler/jaro_winkler_ext.bundle
+
+current directory: /Users/fernandop/Workspace/financial/creditario-client/vendor/ruby/2.4.0/gems/jaro_winkler-1.5.2/ext/jaro_winkler
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 jaro_winkler_ext.bundle ./.gem.20190211-32170-t9eabg/jaro_winkler
