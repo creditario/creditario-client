@@ -9,17 +9,15 @@ before_script:
   - gem install bundler
   - bundle install -j $(nproc) --path vendor
 
-
-
 # the 'pages' job will deploy and build your site to the 'public' path
 pages:
   stage: deploy
   script:
-    - sdoc . -T rails --exclude="vendor/|test/"
+    - bundle exec sdoc . -T rails --exclude="vendor/|test/"
     - mv doc public
   artifacts:
     paths:
       - public
-  # only:
-    # - master # this job will affect only the 'master' branch
+  only:
+    - master # this job will affect only the 'master' branch
 
