@@ -1,0 +1,15 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"01914299bf5413b5163f45b849db0c9a"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: fb82188f-506d-4a84-80c2-45166c20ac79
+X-Runtime: 0.130148
+Transfer-Encoding: chunked
+
+{"data":[{"amount_cents":499317,"payment_type":"annuity","status":"completed","prepaid_type":"not_reduce","payment_method":"SPEI","created_at":"2019-02-15T17:58:50.200-06:00","updated_at":"2019-02-15T17:58:50.200-06:00","installment_id":"8e5d4762-7021-495e-b426-3a8c6c4b8f3d","credit_id":"76f54374-23e8-44ba-9213-9ce5c3d1ee4e","id":"75a0702b-3842-40f7-a25e-f41ec34008ec"}],"links":[{"rel":"self","uri":"/payments/75a0702b-3842-40f7-a25e-f41ec34008ec"}]}

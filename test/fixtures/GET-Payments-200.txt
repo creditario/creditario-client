@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"745fe6be4c2d2bf1054d1d957f4c3cb3"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 831d4582-6c04-4a60-b7c1-8af4b207d4d1
+X-Runtime: 0.063543
+Transfer-Encoding: chunked
+
+{"data":[{"amount_cents":499317,"payment_type":"annuity","status":"completed","prepaid_type":"not_reduce","payment_method":"Tarjeta de crédito","created_at":"2019-02-15T17:18:43.233-06:00","updated_at":"2019-02-15T17:18:43.233-06:00","installment_id":"29f96aa5-76e1-4ab7-b74a-6136afa6bfe6","credit_id":"76f54374-23e8-44ba-9213-9ce5c3d1ee4e","id":"f8d12ca6-8268-4f55-8b0e-e2ef4bc00fb5"},{"amount_cents":499317,"payment_type":"annuity","status":"completed","prepaid_type":"not_reduce","payment_method":"Tarjeta de crédito","created_at":"2019-02-15T17:18:47.723-06:00","updated_at":"2019-02-15T17:18:47.723-06:00","installment_id":"2c447721-3d73-41a2-be3f-4943de52f788","credit_id":"76f54374-23e8-44ba-9213-9ce5c3d1ee4e","id":"1a88d5a8-d5c0-4ed6-916e-f33c8d3e1110"}],"links":[{"rel":"self","uri":"/payments?credit_id=76f54374-23e8-44ba-9213-9ce5c3d1ee4e"}]}
