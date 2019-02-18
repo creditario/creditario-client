@@ -30,6 +30,7 @@ require "creditario/resources/customer"
 require "creditario/resources/catalog"
 require "creditario/resources/attachment"
 require "creditario/resources/credit"
+require "creditario/resources/payment"
 
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"
@@ -41,7 +42,8 @@ require "creditario/repositories/incomes"
 require "creditario/repositories/expenses"
 require "creditario/repositories/references"
 require "creditario/repositories/attachments"
-require "Creditario/repositories/credits"
+require "creditario/repositories/credits"
+require "creditario/repositories/payments"
 
 module Creditario # :nodoc:
   ###
@@ -167,6 +169,14 @@ module Creditario # :nodoc:
       # Para más información, puede consultar la documentación de Creditario::Credits
       def credits
         Creditario::Credits
+      end
+
+      ###
+      # Método de acceso al repositorio de Pagos
+      #
+      # Para más información, puede consultar la documentación de Creditario::Payments
+      def payments
+        Creditario::Payments
       end
     end
   end
