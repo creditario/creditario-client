@@ -15,8 +15,7 @@ class Creditario::CustomersTest < CreditarioAPITest
       first_name: "Juan",
       second_name: "Carlos",
       last_name: "Flores",
-      mother_name: "Iglesias",
-      product_id: "ad0add79-29c9-4305-9ec5-507b5693a2e4"
+      mother_name: "Iglesias"
     }
   end
 

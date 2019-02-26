@@ -22,7 +22,7 @@ module Creditario # :nodoc:
   #
   # - Crear un Cliente:
   #
-  #     result = Creditario::Customers.create(email: "karla@quieredinero.com", product_id: "c005b7f7-a44a-4ec0-bf7f-73d15d806fd9")
+  #     result = Creditario::Customers.create(email: "karla@quieredinero.com")
   #     => Creditario::Customer
   #
   # - Actualizar un cliente:
