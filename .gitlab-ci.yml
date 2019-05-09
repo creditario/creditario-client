@@ -21,3 +21,20 @@ pages:
   only:
     - master # this job will affect only the 'master' branch
 
+test:
+  stage: test
+  script:
+    - bundle exec rake test
+  only:
+    - branches
+  cache:
+    untracked: true
+
+lint:
+  stage: test
+  script:
+    - bundle exec rubocop
+  only:
+    - branches
+  cache:
+    untracked: true

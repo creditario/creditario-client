@@ -58,6 +58,10 @@ module Creditario # :nodoc:
     # Version a utilizar de la API de creditar.io
     @api_version = 1
 
+    ###
+    # Modo entorno de pruebas (Sandbox) por default es false
+    @sandbox = false
+
     class << self
       ###
       # La API Key es necesaria para cualquier interacción con la API de creditar.io
@@ -72,7 +76,7 @@ module Creditario # :nodoc:
       ###
       # URL en la cual se ejecutarán las interacciones con la API de creditar.io
       #
-      # Util cuando se desea utilizar el ambiente de *staging* por ejemplo.
+      # Útil cuando se desea utilizar el ambiente de *staging* por ejemplo.
       #
       # ==== Ejemplo
       #
@@ -83,6 +87,14 @@ module Creditario # :nodoc:
       # Versión a utilizar de la API de creditar.io
       # Por default es 1
       attr_accessor :api_version
+
+      ###
+      # Modo entorno de pruebas (Sandbox)
+      #
+      # Útil cuando se desea obtener datos de entorno de pruebas.
+      #
+      # Por default es false
+      attr_accessor :sandbox
 
       ###
       # Método de acceso al repositorio de Productos.
