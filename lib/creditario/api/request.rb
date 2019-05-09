@@ -68,6 +68,7 @@ module Creditario # :nodoc:
 
           def set_request_headers(request)
             request = set_authorization_headers(request)
+            request = set_sandbox_header(request)
 
             request["Accept"] = "application/vnd.creditar.v#{Creditario::Client.api_version}+json"
             request["Content-Type"] = "application/json"
@@ -79,6 +80,11 @@ module Creditario # :nodoc:
             raise Creditario::Exceptions::MissingAPIKeyError.new if Creditario::Client.api_key.nil?
 
             request["Authorization"] = "Token token=#{Creditario::Client.api_key}"
+            request
+          end
+
+          def set_sandbox_header(request)
+            request["Application-Context"] = !Creditario::Client.sandbox || "sandbox"
             request
           end
 
