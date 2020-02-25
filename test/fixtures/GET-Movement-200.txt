@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"448d486acd0148c8d3c2d3a1128ceb9c"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 6a0fbb11-13ae-420b-8cb6-636b107632cf
+X-Runtime: 0.085080
+Transfer-Encoding: chunked
+
+{"data":[{"reference":"W56J14HBADF","amount_cents":-694000,"movement_type":"charge","folio_number":"NRAKHWG","interest":false,"created_at":"2020-02-24T16:57:45.785-06:00","id":"4f92b15c-61b6-4023-966b-f7b5499cd23c","credit_id":"fc32d052-0334-42db-be73-04685e09c7ef"}],"links":[{"rel":"self","uri":"/movements/4f92b15c-61b6-4023-966b-f7b5499cd23c"}]}
