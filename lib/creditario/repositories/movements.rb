@@ -18,7 +18,7 @@ module Creditario # :nodoc:
   #
   # - Crear un Movimiento:
   #
-  #     Creditario::Movements.create(reference: "Compra a comercio",amount_cents: 100000,credit_id: "8b3825a0-a0da-424c-9856-bdb126b60860",movement_type: "cargo",interest: false,folio_number: "DWJDHQY")
+  #     Creditario::Movements.create(reference: "Compra a comercio",amount_cents: 100000,credit_id: "8b3825a0-a0da-424c-9856-bdb126b60860",movement_type: "charge" ,interest: false,folio_number: "DWJDHQY")
   #     => Creditario::Movement
   module Movements
     extend Creditario::API::List
