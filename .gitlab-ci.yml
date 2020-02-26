@@ -6,7 +6,7 @@ cache:
     - vendor/ruby
 
 before_script:
-  - gem install bundler -v 2.0.1
+  - gem install bundler
   - bundle install -j $(nproc) --path vendor
 
 # the 'pages' job will deploy and build your site to the 'public' path
