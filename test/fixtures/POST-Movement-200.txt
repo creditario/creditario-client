@@ -1,0 +1,15 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"6b5718659bd0e6296d379cf98634137e"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 368f84ce-32d0-405d-a164-d9e257634600
+X-Runtime: 0.082491
+Transfer-Encoding: chunked
+
+{"data":[{"reference":"Compra al OXXO","amount_cents":-100000,"movement_type":"charge","folio_number":"ZFGOLVC","interest":false,"created_at":"2020-02-25T14:39:30.192-06:00","id":"3933281c-13dd-4a7d-8349-d58df801d805","credit_id":"fc32d052-0334-42db-be73-04685e09c7ef"}],"links":[{"rel":"self","uri":"/movements/3933281c-13dd-4a7d-8349-d58df801d805"}]}

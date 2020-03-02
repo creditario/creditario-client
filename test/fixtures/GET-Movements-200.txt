@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"d07228a5bd3b5e7236a3aa0c2afec185"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: a321b66a-c3cf-4fda-8550-e2d6f7b8b83e
+X-Runtime: 0.074979
+Transfer-Encoding: chunked
+
+{"data":[{"reference":"dfhadfg","amount_cents":-200000,"movement_type":"charge","folio_number":"XIIPAEF","interest":false,"created_at":"2020-02-24T16:57:28.235-06:00","id":"ecf021e5-2c66-4d75-a965-b684f7e59057","credit_id":"fc32d052-0334-42db-be73-04685e09c7ef"},{"reference":"sdFHhRT","amount_cents":300000,"movement_type":"payment","folio_number":"ZPORQEM","interest":false,"created_at":"2020-02-24T16:57:37.094-06:00","id":"b49c8518-5e06-434f-8659-9797dd460a65","credit_id":"fc32d052-0334-42db-be73-04685e09c7ef"},{"reference":"W56J14HBADF","amount_cents":-694000,"movement_type":"charge","folio_number":"NRAKHWG","interest":false,"created_at":"2020-02-24T16:57:45.785-06:00","id":"4f92b15c-61b6-4023-966b-f7b5499cd23c","credit_id":"fc32d052-0334-42db-be73-04685e09c7ef"},{"reference":"Compra a comercio","amount_cents":-100000,"movement_type":"charge","folio_number":"MNIGXLT","interest":false,"created_at":"2020-02-25T14:17:15.282-06:00","id":"b604d5b6-c252-47f7-84da-35a3b426fb7f","credit_id":"fc32d052-0334-42db-be73-04685e09c7ef"}],"links":[{"rel":"self","uri":"/movements?credit_id=fc32d052-0334-42db-be73-04685e09c7ef"}],"pagination":{"cursors":{"after":"b604d5b6-c252-47f7-84da-35a3b426fb7f","next_uri":"/movements?cursor=b604d5b6-c252-47f7-84da-35a3b426fb7f"}}}

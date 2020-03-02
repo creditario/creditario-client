@@ -31,6 +31,7 @@ require "creditario/resources/catalog"
 require "creditario/resources/attachment"
 require "creditario/resources/credit"
 require "creditario/resources/payment"
+require "creditario/resources/movement"
 
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"
@@ -44,6 +45,7 @@ require "creditario/repositories/references"
 require "creditario/repositories/attachments"
 require "creditario/repositories/credits"
 require "creditario/repositories/payments"
+require "creditario/repositories/movements"
 
 module Creditario # :nodoc:
   ###
@@ -189,6 +191,14 @@ module Creditario # :nodoc:
       # Para más información, puede consultar la documentación de Creditario::Payments
       def payments
         Creditario::Payments
+      end
+
+      ###
+      # Método de acceso al repositorio de Movimientos
+      #
+      # Para más información, puede consultar la documentación de Creditario::Movements
+      def payments
+        Creditario::Movements
       end
     end
   end
