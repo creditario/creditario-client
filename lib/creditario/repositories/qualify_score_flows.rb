@@ -9,7 +9,7 @@ module Creditario # :nodoc:
   #
   # - Obtener una Calificación:
   #
-  #     Creditario::QualifyScoreFlow.create(credit_application_id: "c005b7f7-a44a-4ec0-bf7f-73d15d806fd9")
+  #     Creditario::QualifyScoreFlows.create(credit_application_id: "c005b7f7-a44a-4ec0-bf7f-73d15d806fd9")
   #     => Creditario::QualifyScoreFlow
   module QualifyScoreFlows
     extend Creditario::API::Create

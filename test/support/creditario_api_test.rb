@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "uri"
+require "tempfile"
 
 class CreditarioAPITest < Minitest::Test
   def setup
@@ -10,11 +11,9 @@ class CreditarioAPITest < Minitest::Test
 
   private
 
-    def image_fixture
-      tempfile = Tempfile.new("image.jpg")
-      tempfile.write("Hello World")
-      tempfile.rewind
-      tempfile
+    def image_fixture(file)
+      fixture_path = File.join(".", "test", "fixtures", "images", file)
+      File.open(fixture_path)
     end
 
     def use_fixture(filename, extension = "txt")

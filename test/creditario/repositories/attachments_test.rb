@@ -43,7 +43,7 @@ class Creditario::AttachmentsTest < CreditarioAPITest
       attachmentable_type: "customer",
       attachmentable_id: "2e9d05b8-2180-4779-bab6-bdfd41d1569f",
       attachment_type: "INE",
-      file: image_fixture
+      file: image_fixture("image.png")
     }
 
     result = @subject.create(create_attachment_params)
