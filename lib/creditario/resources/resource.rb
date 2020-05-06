@@ -6,9 +6,20 @@ module Creditario # :nodoc:
   #
   # Modulo que se encarga de establecer el mecanismo de inicialización de las siguientes clases:
   #
+  # - Creditario::Product
   # - Creditario::Customer
   # - Creditario::Application
-  # - Creditario::Product
+  # - Creditario::Credit
+  # - Creditario::Contract
+  # - Creditario::Expense
+  # - Creditario::Income
+  # - Creditario::Reference
+  # - Creditario::Attachment
+  # - Creditario::CreditEstimate
+  # - Creditario::Catalog
+  # - Creditario::Payment
+  # - Creditario::Movement
+  # - Creditario::QualifyScoreFlow
   #
   module Resource
     def self.included(klass) # :nodoc:
