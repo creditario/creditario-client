@@ -32,6 +32,7 @@ require "creditario/resources/attachment"
 require "creditario/resources/credit"
 require "creditario/resources/payment"
 require "creditario/resources/movement"
+require "creditario/resources/qualify_score_flow"
 
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"
@@ -46,6 +47,7 @@ require "creditario/repositories/attachments"
 require "creditario/repositories/credits"
 require "creditario/repositories/payments"
 require "creditario/repositories/movements"
+require "creditario/repositories/qualify_score_flows"
 
 module Creditario # :nodoc:
   ###
@@ -199,6 +201,14 @@ module Creditario # :nodoc:
       # Para más información, puede consultar la documentación de Creditario::Movements
       def payments
         Creditario::Movements
+      end
+
+      ###
+      # Método de acceso al repositorio de Calificaciones de flujos de calificación
+      #
+      # Para más información, puede consultar la documentación de Creditario::QualifyScoreFlows
+      def qualify_score_flows
+        Creditario::QualifyScoreFlows
       end
     end
   end
