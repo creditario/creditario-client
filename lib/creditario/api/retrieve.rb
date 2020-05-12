@@ -16,6 +16,7 @@ module Creditario # :nodoc:
       def retrieve(id, query_params = {})
         parts = [self.resource_path, id]
         path = parts.compact.join("/")
+        query_params[:cache] = true
         response = API.request(:get, path, query_params)
 
         attributes = response.dig("data").first
