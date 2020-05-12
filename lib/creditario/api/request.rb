@@ -38,8 +38,10 @@ module Creditario # :nodoc:
 
           handle_errored_responses(response)
 
-          return response if response.body.nil?
-          Oj.load(response.body)
+          return response if response.code == "204" && response.body.nil?
+          response_body = handle_responses(response)
+
+          Oj.load(response_body)
         rescue Oj::ParseError => ex
           raise Exceptions::InvalidResponseBodyError, ex.message
         rescue Net::OpenTimeout => ex
@@ -53,8 +55,12 @@ module Creditario # :nodoc:
           def request_from_method(method, uri, params)
             case method
             when :get
+              cache_enabled = params.delete(:cache)
               uri.query = URI.encode_www_form(params)
-              set_request_headers(Net::HTTP::Get.new(uri))
+
+              request = set_request_headers(Net::HTTP::Get.new(uri))
+              request = set_request_cache_headers(request) if defined?(Rails) && cache_enabled
+              request
             when :post
               set_request_body(set_request_headers(Net::HTTP::Post.new(uri)), params)
             when :multipart
@@ -69,8 +75,19 @@ module Creditario # :nodoc:
           def set_request_headers(request)
             request = set_authorization_headers(request)
 
+            request["User-Agent"] = "creditario-client gem v#{Creditario::Client::VERSION}"
             request["Accept"] = "application/vnd.creditar.v#{Creditario::Client.api_version}+json"
-            request["Content-Type"] = "application/json"
+
+            request
+          end
+
+          def set_request_cache_headers(request)
+            @@cached_request = Rails.cache.fetch(request.uri.to_s)
+
+            if @@cached_request
+              request["If-None-Match"] = @@cached_request[:etag]
+              request["If-Modified-Since"] = @@cached_request[:last_modified]
+            end
 
             request
           end
@@ -100,6 +117,18 @@ module Creditario # :nodoc:
             raise Exceptions::ForbiddenError.new(response) if response.code == "403"
             raise Exceptions::ResourceNotFoundError.new(response) if response.code == "404"
             raise Exceptions::UnprocessableEntityError.new(response) if response.code == "422"
+          end
+
+          def handle_responses(response)
+            return @@cached_request[:payload] if response.code == "304" && @@cached_request
+
+            if defined?(Rails) && response.code == "200" && response["Last-Modified"]
+              cache_response = { etag: response["Etag"], last_modified: response["Last-Modified"], payload: response.body }
+
+              Rails.cache.write(response.uri.to_s, cache_response, expires_in: 10.minutes)
+            end
+
+            response.body
           end
       end
     end
