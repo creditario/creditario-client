@@ -33,6 +33,7 @@ require "creditario/resources/credit"
 require "creditario/resources/payment"
 require "creditario/resources/movement"
 require "creditario/resources/qualify_score_flow"
+require "creditario/resources/convert_application_to_credit"
 
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"
@@ -48,6 +49,7 @@ require "creditario/repositories/credits"
 require "creditario/repositories/payments"
 require "creditario/repositories/movements"
 require "creditario/repositories/qualify_score_flows"
+require "creditario/repositories/convert_application_to_credits"
 
 module Creditario # :nodoc:
   ###
@@ -209,6 +211,14 @@ module Creditario # :nodoc:
       # Para más información, puede consultar la documentación de Creditario::QualifyScoreFlows
       def qualify_score_flows
         Creditario::QualifyScoreFlows
+      end
+
+      ###
+      # Método de acceso al repositorio de Convertir una Solicitud en Crédito
+      #
+      # Para más información, puede consultar la documentación de Creditario::ConvertApplicationToCredits
+      def convert_application_to_credits
+        Creditario::ConvertApplicationToCredits
       end
     end
   end
