@@ -5,7 +5,7 @@ module Creditario # :nodoc:
     include Resource
   end
 
-    class CatalogValue # :nodoc:
+  class CatalogValue # :nodoc:
     include Resource
   end
 end
