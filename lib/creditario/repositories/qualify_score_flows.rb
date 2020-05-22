@@ -2,7 +2,7 @@
 
 module Creditario # :nodoc:
   ###
-  # == Creditario::QualifyScoreFlow
+  # == Creditario::QualifyScoreFlows
   #
   # Repositorio de Calificaciones de flujos de calificación, permite obtener una Calificación de un flujo de calificación
   # en base a una Solicitud de creditar.io:
