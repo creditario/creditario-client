@@ -1,0 +1,6 @@
+Version 0.0.7.alpha
+
+Release notes:
+
+- New repository "ConvertApplicationToCredits" for create applications to credits from API of creditar.io
+- Updating documentation removing description for resources that it hasn't makes sense
