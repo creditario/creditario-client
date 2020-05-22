@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 class FixtureAPIResponse # :nodoc:
-  attr_reader :method, :port, :path, :params, :api_token, :name
+  attr_reader :method, :port, :path, :params, :api_token, :name, :api_version
 
   REQUESTS = %w(get post patch delete multipart)
 
   def initialize
-    @method, @port, @path, @params, @api_token, @name = ""
+    @method, @port, @path, @params, @api_token, @name, @api_version = ""
     build_request_and_save_fixture
   end
 
@@ -16,6 +16,7 @@ class FixtureAPIResponse # :nodoc:
     path_gets
     params_gets
     api_token_gets
+    api_version_gets
     name_gets
     execute_request
   end
@@ -69,6 +70,11 @@ class FixtureAPIResponse # :nodoc:
       @name = STDIN.gets.chomp
     end
 
+    def api_version_gets
+      puts "Qué versión desea especificar?"
+      @api_version = STDIN.gets.chomp
+    end
+
     def request_url
       "'localhost:#{port}#{path}'"
     end
@@ -76,7 +82,7 @@ class FixtureAPIResponse # :nodoc:
     def headers
       "-H 'Content-Type: application/json' " \
       "#{header_api_token}" \
-      "-H 'Accept: application/vnd.creditar.v1+json'"
+      "-H 'Accept: application/vnd.creditar.#{api_version}+json'"
     end
 
     def header_api_token

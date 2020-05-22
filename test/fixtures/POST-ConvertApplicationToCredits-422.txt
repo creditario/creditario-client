@@ -1,0 +1,14 @@
+HTTP/1.1 422 Unprocessable Entity
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: 88883008-6503-46da-914d-d7b8775e19e0
+X-Runtime: 0.047425
+Transfer-Encoding: chunked
+
+{"errors":[{"type":"not_found","code":"ERR-404","message":"El recurso no existe.","href":"https://www.creditar.io/api/documentation#err-404"}]}
