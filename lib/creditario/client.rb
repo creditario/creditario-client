@@ -33,7 +33,6 @@ require "creditario/resources/credit"
 require "creditario/resources/payment"
 require "creditario/resources/movement"
 require "creditario/resources/qualify_score_flow"
-require "creditario/resources/convert_application_to_credit"
 
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"

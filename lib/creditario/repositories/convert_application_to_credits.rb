@@ -2,25 +2,20 @@
 
 module Creditario # :nodoc:
   ###
-  # == Creditario::ConvertApplicationToCredit
+  # == Creditario::ConvertApplicationToCredits
   #
-  # Repositorio de Créditos, permite obtener la lista de Créditos a partir de un Cliente
-  # así como obtener un Crédito a partir de su ID.
+  # Repositorio para Convertir Solicitud a Crédito, permite convertir una Solicitud a Crédito.
   #
-  # - Listar Créditos por Cliente:
+  # - Crea para Convertir una Solicitud a Crédito:
   #
-  #     Creditario::Credits.list(customer_id: "2e9d05b8-2180-4779-bab6-bdfd41d1569f")
-  #     => Creditario::ResourcesCollection
-  #
-  # - Obtener un Crédito:
-  #
-  #     Creditario::Credits.retrieve("636264b1-dc0d-453e-8804-4ac451e1dbd5")
+  #     Creditario::ConvertApplicationToCredits.create(credit_application_id: "2e9d05b8-2180-4779-bab6-bdfd41d1569f", accepted_at: "2020-05-01", first_payment_date: "2020-05-02", closing_date_at: "2020-05-04", payment_days: 20)
   #     => Creditario::Credit
+  #
   module ConvertApplicationToCredits
     extend Creditario::API::Create
 
     ###
-    # Path de la API donde se ejecutan las peticiones para Créditos.
+    # Path de la API donde se ejecutan las peticiones para Convertir Solicitud a Crédito.
     def self.resource_path
       "/convert_application_to_credits"
     end
@@ -28,7 +23,7 @@ module Creditario # :nodoc:
     ###
     # Clase a utilizar para transformar las respuestas de la API
     def self.resource_class
-      Creditario::ConvertApplicationToCredit
+      Creditario::Credit
     end
   end
 end
