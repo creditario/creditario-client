@@ -1,0 +1,15 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+ETag: W/"0926a2376b2bd98c639911646bb6084a"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 93e26333-2322-423a-87cf-b11e1580b499
+X-Runtime: 0.513852
+Transfer-Encoding: chunked
+
+{"data":[{"credit_type":"credit_simple","created_at":"2020-05-21T19:47:04.779-05:00","updated_at":"2020-05-21T19:47:04.779-05:00","id":"b95229a4-31ce-46f6-8e12-55a0145ce11d"}],"links":[{"rel":"self","uri":"/credits/b95229a4-31ce-46f6-8e12-55a0145ce11d"}]}
