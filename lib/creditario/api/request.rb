@@ -77,6 +77,7 @@ module Creditario # :nodoc:
 
             request["User-Agent"] = "creditario-client gem v#{Creditario::Client::VERSION}"
             request["Accept"] = "application/vnd.creditar.v#{Creditario::Client.api_version}+json"
+            request["Content-Type"] = "application/json"
 
             request
           end
