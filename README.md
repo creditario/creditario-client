@@ -4,7 +4,7 @@
 
 Solo añade a tu Gemfile:
 
-    gem "creditario-client", git: "git@git.michelada.io:financial/creditario-client.git"
+    gem "creditario-client", git: "git@github.com:creditario/creditario-client.git"
 
 ## Uso
 
