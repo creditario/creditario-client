@@ -33,6 +33,7 @@ require "creditario/resources/credit"
 require "creditario/resources/payment"
 require "creditario/resources/movement"
 require "creditario/resources/qualify_score_flow"
+require "creditario/resources/investor"
 
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"
@@ -49,6 +50,7 @@ require "creditario/repositories/payments"
 require "creditario/repositories/movements"
 require "creditario/repositories/qualify_score_flows"
 require "creditario/repositories/convert_application_to_credits"
+require "creditario/repositories/investors"
 
 module Creditario # :nodoc:
   ###
