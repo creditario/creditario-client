@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"d60737507274cb5978f7ae0c2eda242c"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 301c367b-91f3-43f0-a802-95cec21b595a
+X-Runtime: 0.086634
+Transfer-Encoding: chunked
+
+{"data":[{"investorable_type": "Customer","investorable_id": "5a36f715-1815-453e-81c5-68d0d1f96bc8","email":"carlos@quieroinvertir.com","first_name":"Juan","second_name":"Carlos","last_name":"Pérez","mother_name":"García","blocked":false,"created_at":"2018-06-21T13:13:32.753-05:00","updated_at":"2018-06-29T11:10:08.123-05:00","id":"82875f86-2d4e-4c4e-b0a4-7d2c4a4ca52f","date_of_birth":"12/12/1990","rfc":"JCPG901212FG4","curp":"JCPG901212SFSDCSSF","invested_amount_cents":200000,"available_balance_amount_cents": 10000,"signed_contract_at": "2018-05-04"},{"investorable_type": "Customer","investorable_id": "5a36f715-1815-453e-81c5-68d0d1f96bc9","email":"maria@quieroinvertir.com","first_name":"María","second_name":"Guadalupe","last_name":"Alcaraz","mother_name":"García","blocked":false,"created_at":"2018-06-29T11:09:30.843-05:00","updated_at":"2018-06-29T11:09:30.843-05:00","id":"1cde9f15-d59a-4d79-b426-fa2f66042c60","date_of_birth":"23/04/1991","rfc":"MGAG910423FG5","curp":"MGAG910423SDFSD453","invested_amount_cents":200000,"available_balance_amount_cents": 10000,"signed_contract_at": "2018-05-04"}],"links":[{"rel":"self","uri":"/customers"}],"pagination":{"cursors":{"after":"1cde9f15-d59a-4d79-b426-fa2f66042c60","next_uri":"/investors?cursor=1cde9f15-d59a-4d79-b426-fa2f66042c60"}}}

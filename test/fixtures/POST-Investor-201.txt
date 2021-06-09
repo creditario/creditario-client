@@ -1,0 +1,16 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"3a965881249e26d7160fba1e06163c1f"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 6bf7fbb1-9a1d-4e18-b77c-271975930d5f
+X-Runtime: 0.139350
+Transfer-Encoding: chunked
+
+{"data":[{"investorable_type": "Customer","investorable_id": "5a36f715-1815-453e-81c5-68d0d1f96bc8"}]}
+
