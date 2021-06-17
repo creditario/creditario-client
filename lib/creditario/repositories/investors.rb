@@ -33,7 +33,7 @@ module Creditario # :nodoc:
     ###
     # Path de la API donde se ejecutan las peticiones para Inversionistas.
     def self.resource_path
-      "/investors"
+      "/crowdfunding/investors"
     end
 
     ###

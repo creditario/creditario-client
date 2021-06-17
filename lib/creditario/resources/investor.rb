@@ -3,6 +3,5 @@
 module Creditario # :nodoc:
   class Investor # :nodoc:
     include Resource
-
   end
 end

@@ -20,7 +20,7 @@ class Creditario::InvestorsTest < CreditarioAPITest
   end
 
   def test_it_lists_investors
-    stub_request(:get, build_api_uri("investors")).
+    stub_request(:get, build_api_uri("crowdfunding/investors")).
       with(headers: @headers).
       to_return(use_fixture("GET-Investors-200"))
 
@@ -31,7 +31,7 @@ class Creditario::InvestorsTest < CreditarioAPITest
   end
 
   def test_it_retrieves_an_investor
-    stub_request(:get, build_api_uri("investors", "82875f86-2d4e-4c4e-b0a4-7d2c4a4ca52f")).
+    stub_request(:get, build_api_uri("crowdfunding/investors", "82875f86-2d4e-4c4e-b0a4-7d2c4a4ca52f")).
       with(headers: @headers).
       to_return(use_fixture("GET-Investor-200"))
 
@@ -41,7 +41,7 @@ class Creditario::InvestorsTest < CreditarioAPITest
   end
 
   def test_it_retrieves_a_missing_investor
-    stub_request(:get, build_api_uri("investors", "92875f86-2d4e-4c4e-b0a4-7d2c4a4ca52f")).
+    stub_request(:get, build_api_uri("crowdfunding/investors", "92875f86-2d4e-4c4e-b0a4-7d2c4a4ca52f")).
       with(headers: @headers).
       to_return(use_fixture("GET-Investor-404"))
 
@@ -52,7 +52,7 @@ class Creditario::InvestorsTest < CreditarioAPITest
   end
 
   def test_it_creates_an_investor
-    stub_request(:post, build_api_uri("investors")).
+    stub_request(:post, build_api_uri("crowdfunding/investors")).
       with(headers: @headers).
       to_return(use_fixture("POST-Investor-201"))
 
@@ -62,7 +62,7 @@ class Creditario::InvestorsTest < CreditarioAPITest
   end
 
   def test_it_creates_investor_fail
-    stub_request(:post, build_api_uri("investors")).
+    stub_request(:post, build_api_uri("crowdfunding/investors")).
       with(headers: @headers).
       to_return(use_fixture("POST-Investor-201"))
 
