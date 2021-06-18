@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"e0bbd694a0ca1615e112902ea99e8fd3"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 73476974-a5fa-40ad-88f1-1e1b2b62b49a
+X-Runtime: 0.019284
+Transfer-Encoding: chunked
+
+{"data":[{"investorable_type": "Customer","investorable_id": "5a36f715-1815-453e-81c5-68d0d1f96bc8","email":"carlos@quierodinero.com","first_name":"Juan","second_name":"Carlos","last_name":"Pérez","mother_name":"García","blocked":false,"created_at":"2018-06-21T13:13:32.753-05:00","updated_at":"2018-06-29T11:10:08.123-05:00","id":"82875f86-2d4e-4c4e-b0a4-7d2c4a4ca52f","date_of_birth":"12/12/1990","rfc":"JCPG901212FG4","curp":"JCPG901212SFSDCSSF","invested_amount_cents": 20000,"available_balance_amount_cents": 10000,"signed_contract_at": "2018-05-04","contract": {"id": "0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a"},"funds": [{"id": "3c8b46ce-a5f2-4f25-8280-a80551eacd21"}],"movements":[{"id": "3c8b46ce-a5f2-4f25-8280-a80551eacd21"}]}],"links":[{"rel":"self","uri":"/investors/82875f86-2d4e-4c4e-b0a4-7d2c4a4ca52f"}]}
