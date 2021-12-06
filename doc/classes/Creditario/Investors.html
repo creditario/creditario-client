@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creditario::Investors</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <meta property="og:title" value="Creditario::Investors">
+
+  
+    
+    <meta name="description" content="Creditario::Investors  Repositorio de Inversionistas, permite realizar las siguientes operaciones sobre Inversionistas de creditar.">
+    <meta property="og:description" content="Creditario::Investors  Repositorio de Inversionistas, permite realizar las siguientes operaciones sobre Inversionistas de creditar.">
+  
+
+    <meta name="keywords" content="Creditario::Investors class">
+  
+    <meta name="keywords" content="resource_path, resource_class">
+  
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span>
+            Creditario::Investors
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/creditario/repositories/investors_rb.html">lib/creditario/repositories/investors.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h2 id="module-Creditario::Investors-label-Creditario-3A-3AInvestors"><a href="Investors.html"><code>Creditario::Investors</code></a></h2>
+
+<p>Repositorio de Inversionistas, permite realizar las siguientes operaciones sobre Inversionistas de creditar.io</p>
+<ul><li>
+<p>Obtener todos los Inversionistas:</p>
+
+<pre><code>result = Creditario::Investors.list
+=&gt; Creditario::PaginatedCollection
+
+result.items
+=&gt; [Creditario::Investor, Creditario::Investor, ...]
+</code></pre>
+</li><li>
+<p>Obtener un Inversionista en especifico:</p>
+
+<pre><code>Creditario::Investors.retrieve(&quot;2e9d05b8-2180-4779-bab6-bdfd41d1569f&quot;)
+=&gt; Creditario::Investor
+</code></pre>
+</li><li>
+<p>Crear un Inversionista:</p>
+
+<pre><code>result = Creditario::Investors.create(email: &quot;karla@quiereinvertir.com&quot;)
+=&gt; Creditario::Investor
+</code></pre>
+</li></ul>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-resource_class">resource_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-resource_path">resource_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_class">
+            
+              <b>resource_class</b>()
+            
+            <a href="../../classes/Creditario/Investors.html#method-c-resource_class" name="method-c-resource_class" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Clase a utilizar para transformar las respuestas de la <a href="API.html"><code>API</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_class_source')" id="l_method-c-resource_class_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/investors.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_class</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Investor</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_path">
+            
+              <b>resource_path</b>()
+            
+            <a href="../../classes/Creditario/Investors.html#method-c-resource_path" name="method-c-resource_path" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Path de la <a href="API.html"><code>API</code></a> donde se ejecutan las peticiones para Inversionistas.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_path_source')" id="l_method-c-resource_path_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/investors.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_path</span>
+  <span class="ruby-string">&quot;/crowdfunding/investors&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creditario::Attachments</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <meta property="og:title" value="Creditario::Attachments">
+
+  
+    
+    <meta name="description" content="Creditario::Attachments  Repositorio de Archivos, permite realizar las siguientes operaciones sobre Archivos para Solicitudes de Crédito y Clientes de creditario.">
+    <meta property="og:description" content="Creditario::Attachments  Repositorio de Archivos, permite realizar las siguientes operaciones sobre Archivos para Solicitudes de Crédito y Clientes de creditario.">
+  
+
+    <meta name="keywords" content="Creditario::Attachments class">
+  
+    <meta name="keywords" content="resource_path, resource_class">
+  
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span>
+            Creditario::Attachments
+            
+                <span class="parent">&lt;
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/creditario/repositories/attachments_rb.html">lib/creditario/repositories/attachments.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h2 id="class-Creditario::Attachments-label-Creditario-3A-3AAttachments"><a href="Attachments.html"><code>Creditario::Attachments</code></a></h2>
+
+<p>Repositorio de Archivos, permite realizar las siguientes operaciones sobre Archivos para Solicitudes de Crédito y Clientes de creditario.io</p>
+<ul><li>
+<p>Obtener un Archivo en especifico:</p>
+
+<pre><code>Creditario::Attachments.retrieve(&quot;aabfd43d-6f63-44dd-b7d9-9352a101d11e&quot;)
+=&gt; Creditario::Attachment
+</code></pre>
+</li><li>
+<p>Crear un Archivo:</p>
+
+<p>Nota: Para el envío del archivo es necesario utilizar la clase <code>UploadIO.new</code>.</p>
+
+<pre><code>file_upload_io = UploadIO.new(File.new(&quot;@/path/to/a/file.jpg&quot;), &quot;image/jpg&quot;, &quot;file.jpg&quot;)
+
+result = Creditario::Attachments.create(
+  attachmentable_type: &quot;credit_application&quot;,
+  attachmentable_id: &quot;4e9ece5f-d4e6-4fcd-bc9b-b437bef23ceb&quot;,
+  attachment_type: &quot;INE&quot;,
+  file: file_upload_io
+)
+=&gt; Creditario::Attachment
+</code></pre>
+</li><li>
+<p>Eliminar un Archivo:</p>
+
+<pre><code>result = Creditario::Attachments.delete(&quot;aabfd43d-6f63-44dd-b7d9-9352a101d11e&quot;)
+=&gt; true
+</code></pre>
+</li></ul>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-resource_class">resource_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-resource_path">resource_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_class">
+            
+              <b>resource_class</b>()
+            
+            <a href="../../classes/Creditario/Attachments.html#method-c-resource_class" name="method-c-resource_class" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Clase a utilizar para transformar las respuestas de la <a href="API.html"><code>API</code></a>.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_class_source')" id="l_method-c-resource_class_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/attachments.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_class</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Attachment</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_path">
+            
+              <b>resource_path</b>()
+            
+            <a href="../../classes/Creditario/Attachments.html#method-c-resource_path" name="method-c-resource_path" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Path de la <a href="API.html"><code>API</code></a> donde se ejecutan las peticiones para Egresos.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_path_source')" id="l_method-c-resource_path_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/attachments.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_path</span>
+  <span class="ruby-string">&quot;/attachments&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creditario::Client</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <meta property="og:title" value="Creditario::Client">
+
+  
+    
+    <meta name="description" content="Creditario::Client  Modulo que será utilizado para consumir la API de creditar.">
+    <meta property="og:description" content="Creditario::Client  Modulo que será utilizado para consumir la API de creditar.">
+  
+
+    <meta name="keywords" content="Creditario::Client class">
+  
+    <meta name="keywords" content="products, customers, applications, contracts, catalogs, incomes, expenses, references, attachments, credit_estimates, credits, payments, qualify_score_flows, convert_application_to_credits">
+  
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span>
+            Creditario::Client
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/creditario/client_rb.html">lib/creditario/client.rb</a></li>
+            
+            <li><a href="../../files/lib/creditario/client/version_rb.html">lib/creditario/client/version.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h2 id="module-Creditario::Client-label-Creditario-3A-3AClient"><a href="Client.html"><code>Creditario::Client</code></a></h2>
+
+<p>Modulo que será utilizado para consumir la <a href="API.html"><code>API</code></a> de creditar.io</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-applications">applications</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-attachments">attachments</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-catalogs">catalogs</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-contracts">contracts</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-convert_application_to_credits">convert_application_to_credits</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-credit_estimates">credit_estimates</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-credits">credits</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-customers">customers</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-expenses">expenses</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-incomes">incomes</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-payments">payments</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-products">products</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Q</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-qualify_score_flows">qualify_score_flows</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-references">references</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">VERSION</td>
+            <td>=</td>
+            <td class="attr-value">&quot;0.0.7.alpha&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>Versión actual de la gema <strong>creditario-client</strong></p></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>api_base</td>
+            <td class='attr-desc'><p>URL en la cual se ejecutarán las interacciones con la <a href="API.html"><code>API</code></a> de creditar.io</p>
+
+<p>Útil cuando se desea utilizar el ambiente de <strong>staging</strong> por ejemplo.</p>
+
+<h4 id="attribute-c-api_base-label-Ejemplo">Ejemplo</h4>
+
+<pre><code>Creditario::Client.api_base = &quot;https://staging.creditar.io&quot;
+</code></pre></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>api_key</td>
+            <td class='attr-desc'><p>La <a href="API.html"><code>API</code></a> Key es necesaria para cualquier interacción con la <a href="API.html"><code>API</code></a> de creditar.io</p>
+
+<p>Después de requerir la gema, lo más recomendado es definir la <a href="API.html"><code>API</code></a> Key a utilizar en todas las llamadas a la <a href="API.html"><code>API</code></a>.</p>
+
+<h4 id="attribute-c-api_key-label-Ejemplo">Ejemplo</h4>
+
+<pre><code>Creditario::Client.api_key = &quot;BMBE96Wva8NaYMmVx4RavpXSy6Y6HKFe&quot;
+</code></pre></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>api_version</td>
+            <td class='attr-desc'><p>Versión a utilizar de la <a href="API.html"><code>API</code></a> de creditar.io Por default es 1</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>sandbox</td>
+            <td class='attr-desc'><p>Modo entorno de pruebas (Sandbox)</p>
+
+<p>Útil cuando se desea obtener datos de entorno de pruebas.</p>
+
+<p>Por default es false</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-applications">
+            
+              <b>applications</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-applications" name="method-c-applications" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Solicitudes.</p>
+
+<p>Para más información, puedes consultar la documentación de <a href="Applications.html"><code>Creditario::Applications</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-applications_source')" id="l_method-c-applications_source">show</a>
+                
+              </p>
+              <div id="method-c-applications_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">applications</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Applications</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-attachments">
+            
+              <b>attachments</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-attachments" name="method-c-attachments" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Archivos.</p>
+
+<p>Para más información, puede consultar la documentación de <a href="Attachments.html"><code>Creditario::Attachments</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-attachments_source')" id="l_method-c-attachments_source">show</a>
+                
+              </p>
+              <div id="method-c-attachments_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">attachments</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Attachments</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-catalogs">
+            
+              <b>catalogs</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-catalogs" name="method-c-catalogs" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Catálogos.</p>
+
+<p>Para más información, puedes consultar la documentación de <a href="Catalogs.html"><code>Creditario::Catalogs</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-catalogs_source')" id="l_method-c-catalogs_source">show</a>
+                
+              </p>
+              <div id="method-c-catalogs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">catalogs</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Catalogs</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-contracts">
+            
+              <b>contracts</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-contracts" name="method-c-contracts" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acesso al repositorio de Contratos.</p>
+
+<p>Para más información, puedes consultrar la documentación de <a href="Contracts.html"><code>Creditario::Contracts</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-contracts_source')" id="l_method-c-contracts_source">show</a>
+                
+              </p>
+              <div id="method-c-contracts_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">contracts</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Contracts</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-convert_application_to_credits">
+            
+              <b>convert_application_to_credits</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-convert_application_to_credits" name="method-c-convert_application_to_credits" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Convertir una Solicitud en Crédito</p>
+
+<p>Para más información, puede consultar la documentación de <a href="ConvertApplicationToCredits.html"><code>Creditario::ConvertApplicationToCredits</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-convert_application_to_credits_source')" id="l_method-c-convert_application_to_credits_source">show</a>
+                
+              </p>
+              <div id="method-c-convert_application_to_credits_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">convert_application_to_credits</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">ConvertApplicationToCredits</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-credit_estimates">
+            
+              <b>credit_estimates</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-credit_estimates" name="method-c-credit_estimates" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Estimaciones de Crédito</p>
+
+<p>Para más información, puede consultar la documentación de <a href="CreditEstimates.html"><code>Creditario::CreditEstimates</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-credit_estimates_source')" id="l_method-c-credit_estimates_source">show</a>
+                
+              </p>
+              <div id="method-c-credit_estimates_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">credit_estimates</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">CreditEstimates</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-credits">
+            
+              <b>credits</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-credits" name="method-c-credits" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Créditos</p>
+
+<p>Para más información, puede consultar la documentación de <a href="Credits.html"><code>Creditario::Credits</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-credits_source')" id="l_method-c-credits_source">show</a>
+                
+              </p>
+              <div id="method-c-credits_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">credits</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Credits</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-customers">
+            
+              <b>customers</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-customers" name="method-c-customers" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Clientes.</p>
+
+<p>Para más información, puedes consultar la documentación de <a href="Customers.html"><code>Creditario::Customers</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-customers_source')" id="l_method-c-customers_source">show</a>
+                
+              </p>
+              <div id="method-c-customers_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">customers</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Customers</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-expenses">
+            
+              <b>expenses</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-expenses" name="method-c-expenses" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Egresos.</p>
+
+<p>Para más información, puedes consultar la documentación de <a href="Expenses.html"><code>Creditario::Expenses</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-expenses_source')" id="l_method-c-expenses_source">show</a>
+                
+              </p>
+              <div id="method-c-expenses_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">expenses</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Expenses</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-incomes">
+            
+              <b>incomes</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-incomes" name="method-c-incomes" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Ingresos.</p>
+
+<p>Para más información, puedes consultar la documentación de <a href="Incomes.html"><code>Creditario::Incomes</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-incomes_source')" id="l_method-c-incomes_source">show</a>
+                
+              </p>
+              <div id="method-c-incomes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">incomes</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Incomes</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-payments">
+            
+              <b>payments</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-payments" name="method-c-payments" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Pagos</p>
+
+<p>Para más información, puede consultar la documentación de <a href="Payments.html"><code>Creditario::Payments</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-payments_source')" id="l_method-c-payments_source">show</a>
+                
+              </p>
+              <div id="method-c-payments_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">payments</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Payments</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-products">
+            
+              <b>products</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-products" name="method-c-products" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Productos.</p>
+
+<p>Para más información, puedes consultar la documentación de <a href="Products.html"><code>Creditario::Products</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-products_source')" id="l_method-c-products_source">show</a>
+                
+              </p>
+              <div id="method-c-products_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">products</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Products</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-qualify_score_flows">
+            
+              <b>qualify_score_flows</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-qualify_score_flows" name="method-c-qualify_score_flows" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Calificaciones de flujos de calificación</p>
+
+<p>Para más información, puede consultar la documentación de <a href="QualifyScoreFlows.html"><code>Creditario::QualifyScoreFlows</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-qualify_score_flows_source')" id="l_method-c-qualify_score_flows_source">show</a>
+                
+              </p>
+              <div id="method-c-qualify_score_flows_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">qualify_score_flows</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">QualifyScoreFlows</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-references">
+            
+              <b>references</b>()
+            
+            <a href="../../classes/Creditario/Client.html#method-c-references" name="method-c-references" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método de acceso al repositorio de Referencias.</p>
+
+<p>Para más información, puedes consultar la documentación de <a href="References.html"><code>Creditario::References</code></a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-references_source')" id="l_method-c-references_source">show</a>
+                
+              </p>
+              <div id="method-c-references_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/client.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">references</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">References</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

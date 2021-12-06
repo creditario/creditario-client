@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creditario::Catalogs</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <meta property="og:title" value="Creditario::Catalogs">
+
+  
+    
+    <meta name="description" content="Creditario::Catalogs  Repositorio de Catálogos, permite realizar las siguientes operaciones sobre Catálogos de creditar.io:  Obtener todos los Catálogos disponibles:  result = Creditario::Catalogs.">
+    <meta property="og:description" content="Creditario::Catalogs  Repositorio de Catálogos, permite realizar las siguientes operaciones sobre Catálogos de creditar.io:  Obtener todos los Catálogos disponibles:  result = Creditario::Catalogs.">
+  
+
+    <meta name="keywords" content="Creditario::Catalogs class">
+  
+    <meta name="keywords" content="resource_path, resource_class, retrieve">
+  
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span>
+            Creditario::Catalogs
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/creditario/repositories/catalogs_rb.html">lib/creditario/repositories/catalogs.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h2 id="module-Creditario::Catalogs-label-Creditario-3A-3ACatalogs"><a href="Catalogs.html"><code>Creditario::Catalogs</code></a></h2>
+
+<p>Repositorio de Catálogos, permite realizar las siguientes operaciones sobre Catálogos de creditar.io:</p>
+<ul><li>
+<p>Obtener todos los Catálogos disponibles:</p>
+
+<pre><code>result = Creditario::Catalogs.list
+=&gt; Creditario::ResourcesCollection
+
+result.items
+=&gt; [Creditario::Catalog, Creditario::Catalog, ...]
+</code></pre>
+</li><li>
+<p>Obtener los valores de un Catálogo en especifico:</p>
+
+<pre><code>Creditario::Catalog.retrieve(resource: &quot;customer&quot;, field: &quot;source&quot;)
+=&gt; Creditario::ResourcesCollection
+</code></pre>
+</li></ul>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-resource_class">resource_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-resource_path">resource_path</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-retrieve">retrieve</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_class">
+            
+              <b>resource_class</b>()
+            
+            <a href="../../classes/Creditario/Catalogs.html#method-c-resource_class" name="method-c-resource_class" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Clase a utilizar para transformar las respuestas de la <a href="API.html"><code>API</code></a>.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_class_source')" id="l_method-c-resource_class_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/catalogs.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_class</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">caller_locations</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">label</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;retrieve&quot;</span>
+    <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">CatalogValue</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Catalog</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_path">
+            
+              <b>resource_path</b>()
+            
+            <a href="../../classes/Creditario/Catalogs.html#method-c-resource_path" name="method-c-resource_path" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Path de la <a href="API.html"><code>API</code></a> donde se ejecutan las peticiones para Catálogos</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_path_source')" id="l_method-c-resource_path_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/catalogs.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_path</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">caller_locations</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">label</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;retrieve&quot;</span>
+    <span class="ruby-string">&quot;/catalog&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-string">&quot;/catalogs&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-retrieve">
+            
+              <b>retrieve</b>(**search_params)
+            
+            <a href="../../classes/Creditario/Catalogs.html#method-c-retrieve" name="method-c-retrieve" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Método para obtener los valores de un Catálogo, que generalmente son varios. Es por ello que no se extendió el modulo <a href="API/Retrieve.html"><code>Creditario::API::Retrieve</code></a> ya que ese está pensado para procesar un solo Recurso a la vez.</p>
+
+<p>Los <strong>search_params</strong> necesitan ser <strong>resource</strong> y <strong>field</strong> tal y como se especifica en la descripción del Repositorio <a href="Catalogs.html"><code>Creditario::Catalogs</code></a>.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-retrieve_source')" id="l_method-c-retrieve_source">show</a>
+                
+              </p>
+              <div id="method-c-retrieve_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/catalogs.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">retrieve</span>(<span class="ruby-operator">**</span><span class="ruby-identifier">search_params</span>)
+  <span class="ruby-identifier">response</span> = <span class="ruby-constant">API</span>.<span class="ruby-identifier">request</span>(<span class="ruby-value">:get</span>, <span class="ruby-identifier">resource_path</span>, <span class="ruby-identifier">search_params</span>)
+  <span class="ruby-constant">ResourcesCollection</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resource_class</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Exceptions</span><span class="ruby-operator">::</span><span class="ruby-constant">ResourceNotFoundError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">exception</span>
+  <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">server_response</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

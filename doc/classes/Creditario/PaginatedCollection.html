@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creditario::PaginatedCollection</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <meta property="og:title" value="Creditario::PaginatedCollection">
+
+  
+    
+    <meta name="description" content="Creditario::PaginatedCollection  Representa una colección de recursos paginados, a los cuales se puede acceder mediante el atributo items.">
+    <meta property="og:description" content="Creditario::PaginatedCollection  Representa una colección de recursos paginados, a los cuales se puede acceder mediante el atributo items.">
+  
+
+    <meta name="keywords" content="Creditario::PaginatedCollection class">
+  
+    <meta name="keywords" content="new">
+  
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span>
+            Creditario::PaginatedCollection
+            
+                <span class="parent">&lt;
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/creditario/utils/paginated_collection_rb.html">lib/creditario/utils/paginated_collection.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h2 id="class-Creditario::PaginatedCollection-label-Creditario-3A-3APaginatedCollection"><a href="PaginatedCollection.html"><code>Creditario::PaginatedCollection</code></a></h2>
+
+<p>Representa una colección de recursos paginados, a los cuales se puede acceder mediante el atributo <code>items</code>.</p>
+
+<p>También contiene información relacionada a los recursos relacionados mediante el atributo <code>links</code>.</p>
+
+<p>Así como los cursores de la paginación, encontados en el atributo <code>cursors</code></p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>cursors</td>
+            <td class='attr-desc'><p>Información sobre el siguiente cursor utilizado en la paginación</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>items</td>
+            <td class='attr-desc'><p>Arreglo de todos los recursos obtenidos de la <a href="API.html"><code>API</code></a></p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>links</td>
+            <td class='attr-desc'><p>Links relacionados a la llamada realizada a la <a href="API.html"><code>API</code></a></p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(json_response = {}, item_class)
+            
+            <a href="../../classes/Creditario/PaginatedCollection.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Recibe el JSON parseado de la llamada ejecutada a la <a href="API.html"><code>API</code></a> y lo procesa obteniendo así la colección de items de la clase específica a la que pertenecen, los links y los cursores de paginación.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/utils/paginated_collection.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">json_response</span> = {}, <span class="ruby-identifier">item_class</span>)
+  <span class="ruby-ivar">@items</span> = <span class="ruby-identifier">build_items</span>(<span class="ruby-identifier">json_response</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-string">&quot;data&quot;</span>), <span class="ruby-identifier">item_class</span>)
+  <span class="ruby-ivar">@links</span> = <span class="ruby-identifier">json_response</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-string">&quot;links&quot;</span>)
+  <span class="ruby-ivar">@cursors</span> = <span class="ruby-identifier">json_response</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-string">&quot;pagination&quot;</span>, <span class="ruby-string">&quot;cursors&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

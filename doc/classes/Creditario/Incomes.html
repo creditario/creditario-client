@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creditario::Incomes</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <meta property="og:title" value="Creditario::Incomes">
+
+  
+    
+    <meta name="description" content="Creditario::Incomes  Repositorio de Ingresos, permite realizar las siguientes operaciones sobre Ingresos para Solicitudes de Crédito de creditar.">
+    <meta property="og:description" content="Creditario::Incomes  Repositorio de Ingresos, permite realizar las siguientes operaciones sobre Ingresos para Solicitudes de Crédito de creditar.">
+  
+
+    <meta name="keywords" content="Creditario::Incomes class">
+  
+    <meta name="keywords" content="resource_path, resource_class">
+  
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span>
+            Creditario::Incomes
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/creditario/repositories/incomes_rb.html">lib/creditario/repositories/incomes.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h2 id="module-Creditario::Incomes-label-Creditario-3A-3AIncomes"><a href="Incomes.html"><code>Creditario::Incomes</code></a></h2>
+
+<p>Repositorio de Ingresos, permite realizar las siguientes operaciones sobre Ingresos para Solicitudes de Crédito de creditar.io</p>
+<ul><li>
+<p>Obtener un Ingreso en especifico:</p>
+
+<pre><code>Creditario::Incomes.retrieve(&quot;0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a&quot;)
+=&gt; Creditario::Income
+</code></pre>
+</li><li>
+<p>Crear un Ingreso:</p>
+
+<pre><code>result = Creditario::Incomes.create(classification: &quot;Trabajo&quot;, amount_cents: 45000, credit_application_id: &quot;636264b1-77a2-45ef-b643-e44cfbc84d40&quot;)
+=&gt; Creditario::Income
+</code></pre>
+</li><li>
+<p>Eliminar un Ingreso:</p>
+
+<pre><code>result = Creditario::Incomes.delete(&quot;0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a&quot;)
+=&gt; true
+</code></pre>
+</li></ul>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-resource_class">resource_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-resource_path">resource_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_class">
+            
+              <b>resource_class</b>()
+            
+            <a href="../../classes/Creditario/Incomes.html#method-c-resource_class" name="method-c-resource_class" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Clase a utilizar para transformar las respuestas de la <a href="API.html"><code>API</code></a>.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_class_source')" id="l_method-c-resource_class_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/incomes.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_class</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">Income</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_path">
+            
+              <b>resource_path</b>()
+            
+            <a href="../../classes/Creditario/Incomes.html#method-c-resource_path" name="method-c-resource_path" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Path de la <a href="API.html"><code>API</code></a> donde se ejecutan las peticiones para Ingresos.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_path_source')" id="l_method-c-resource_path_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/incomes.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_path</span>
+  <span class="ruby-string">&quot;/incomes&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

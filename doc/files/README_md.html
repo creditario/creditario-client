@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>README.md</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            README.md
+        </h1>
+        <ul class="files">
+            
+            <li>
+                README.md
+                
+            </li>
+            <li>Last modified: 2021-06-07 16:11:31 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h1 id="label-Creditario-3A-3AClient"><a href="../classes/Creditario/Client.html"><code>Creditario::Client</code></a></h1>
+
+<h2 id="label-Instalaci-C3-B3n">Instalación</h2>
+
+<p>Solo añade a tu Gemfile:</p>
+
+<pre><code>gem &quot;creditario-client&quot;, git: &quot;git@github.com:creditario/creditario-client.git&quot;
+</code></pre>
+
+<h2 id="label-Uso">Uso</h2>
+
+<h3 id="label-Ruby+on+Rails">Ruby on Rails</h3>
+
+<h4 id="label-5.2-2B">5.2+</h4>
+
+<p>Si utilizas Ruby on Rails en su versión 5.2, hay 2 cosas que debes hacer, la primera es:</p>
+
+<pre><code>$ bundle exec rails g creditario:install
+</code></pre>
+
+<p>Y la segunda es editar tu archivo de credenciales, para añadir el <em>api_key</em> de tu Organización:</p>
+
+<pre><code>$ EDITOR=vim bundle exec rails credentials:edit
+</code></pre>
+
+<p>Dentro de tu archivo de credenciales, debes agregar lo siguiente:</p>
+
+<pre><code>creditario:
+  development:
+    api_key: BMBE96Wva8NaYMmVx4RavpXSy6Y6HKFe
+  production:
+    api_key: v48mbFLupTLWGvYnLVjDqaeEUJEYHmAM # Your production api_key
+</code></pre>
+
+<p>¡Listo! Ya tienes el cliente para la API de creditar.io totalmente configurado.</p>
+
+<h4 id="label-3C+5.2">&lt; 5.2</h4>
+
+<p>En caso de que tu aplicación de Rails no utilice el archivo de credenciales, tal vez prefieras utilizar <strong>variables de entorno</strong> para configurar el <code>api_key</code> y el <code>api_base</code> del cliente para la API de creditar.io</p>
+
+<p>Todo lo que tienes que hacer es ejecutar:</p>
+
+<pre><code>$ bundle exec rails g creditario:install
+</code></pre>
+
+<p>Y actualizar el archivo <code>config/creditario.yml</code> que fue generado previamente:</p>
+
+<pre><code>default: &amp;default
+  api_base: &lt;%= ENV[&quot;CREDITARIO_API_URL&quot;] || &quot;http://localhost:3000&quot; %&gt;
+  api_key: &lt;%= ENV[&quot;CREDITARIO_API_KEY&quot;] %&gt;
+</code></pre>
+
+<p>Listo, ahora solamente deberás inicializar las variables de entorno para que el cliente sea configurado correctamente.</p>
+
+<h3 id="label-Fuera+de+Rails">Fuera de Rails</h3>
+
+<p>Si deseas usar la gema fuera de una aplicación de Rails. Justo después de requerirla en tu código debes configurar la <code>api_key</code> y la <code>api_base</code> a utilizar.</p>
+
+<p>Esto lo puedes lograr con lo siguiente:</p>
+
+<pre><code>Creditario::Client.api_key = &quot;BMBE96Wva8NaYMmVx4RavpXSy6Y6HKFe&quot;
+Creditario::Client.api_base = &quot;http://localhost:3000&quot;
+</code></pre>
+
+<h2 id="label-Desarrollo">Desarrollo</h2>
+
+<p>Recuerda que si necesitas hacer pruebas, deberás tener la API de creditar.io corriendo en tu máquina local o conectarte a la URL de staging.</p>
+
+<p>Si estás haciendo pruebas locales, puedes especificar la URL y el puerto, gracias a la variable de entorno llamada: <code>CREDITARIO_API_URL</code>, usala antes de iniciar tus pruebas/desarrollo, ejemplo:</p>
+
+<pre><code>$ CREDITARIO_API_URL=http://localhost:9000 bundle exec rails server
+</code></pre>
+
+<p>Por defecto, siempre intentará conectarse a <code>http://localhost:3000</code> si no se pasa la variable de entorno.</p>
+
+<h2 id="label-Ejemplos">Ejemplos</h2>
+
+<h3 id="label-Productos">Productos</h3>
+
+<p>Las operaciones que puedes realizar sobre Productos son: listar y obtener.</p>
+
+<h4 id="label-Listar+todos+los+Productos+activos">Listar todos los Productos activos</h4>
+
+<pre><code>result = Creditario::Products.list
+=&gt; Creditario::PaginatedCollection
+
+result.items
+=&gt; [Creditario::Product, Creditario::Product, ...]
+</code></pre>
+
+<h4 id="label-Obtener+un+Producto">Obtener un Producto</h4>
+
+<pre><code>Creditario::Products.retrieve(&quot;c005b7f7-a44a-4ec0-bf7f-73d15d806fd9&quot;)
+=&gt; Creditario::Product
+</code></pre>
+
+<h3 id="label-Clientes">Clientes</h3>
+
+<p>Las operaciones que puedes realizar sobre Clientes son: listar, obtener, crear y actualizar.</p>
+
+<h4 id="label-Listar+todos+los+Clientes">Listar todos los Clientes</h4>
+
+<pre><code>result = Creditario::Customers.list
+=&gt; Creditario::PaginatedCollection
+
+result.items
+=&gt; [Creditario::Customer, Creditario::Customer, ...]
+</code></pre>
+
+<h4 id="label-Obtener+un+Cliente">Obtener un Cliente</h4>
+
+<pre><code>Creditario::Customers.retrieve(&quot;2e9d05b8-2180-4779-bab6-bdfd41d1569f&quot;)
+=&gt; Creditario::Customer
+</code></pre>
+
+<h4 id="label-Crear+un+Cliente">Crear un Cliente</h4>
+
+<pre><code>result = Creditario::Customers.create(email: &quot;karla@quieredinero.com&quot;, product_id: &quot;c005b7f7-a44a-4ec0-bf7f-73d15d806fd9&quot;)
+=&gt; Creditario::Customer
+</code></pre>
+
+<h4 id="label-Actualizar+un+Cliente">Actualizar un Cliente</h4>
+
+<pre><code>result = Creditario::Customers.update(&quot;2e9d05b8-2180-4779-bab6-bdfd41d1569f&quot;, { email: &quot;karina@necesitadinero.com&quot; })
+=&gt; Creditario::Customer
+</code></pre>
+
+<h3 id="label-Solicitudes">Solicitudes</h3>
+
+<p>Las operaciones que puedes realizar sobre Solicitudes son: listar, obtener, crear y actualizar.</p>
+
+<h4 id="label-Listar+todas+las+Solicitudes">Listar todas las Solicitudes</h4>
+
+<pre><code>result = Creditario::Applications.list
+=&gt; Creditario::PaginatedCollection
+
+result.items
+=&gt; [Creditario::Application, Creditario::Application, ...]
+</code></pre>
+
+<h4 id="label-Obtener+una+Solicitud">Obtener una Solicitud</h4>
+
+<pre><code>Creditario::Applications.retrieve(&quot;0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a&quot;)
+=&gt; Creditario::Application
+</code></pre>
+
+<h4 id="label-Crear+una+Solicitud">Crear una Solicitud</h4>
+
+<pre><code>result = Creditario::Applications.create(customer_id: &quot;2e9d05b8-2180-4779-bab6-bdfd41d1569f&quot;, product_id: &quot;c005b7f7-a44a-4ec0-bf7f-73d15d806fd9&quot;)
+=&gt; Creditario::Application
+</code></pre>
+
+<h4 id="label-Actualizar+una+Solicitud">Actualizar una Solicitud</h4>
+
+<pre><code>result = Creditario::Applications.update(&quot;c0324939-0802-41b2-b81e-04e8982270ec&quot;, { street: &quot;Avenida Siempre Viva&quot;, exterior_number: &quot;742&quot; })
+=&gt; Creditario::Application
+</code></pre>
+
+<h3 id="label-Ingresos">Ingresos</h3>
+
+<p>Las operaciones que puedes realizar sobre Ingresos son: obtener, crear y eliminar.</p>
+
+<h4 id="label-Obtener+un+Ingreso">Obtener un Ingreso</h4>
+
+<pre><code>Creditario::Incomes.retrieve(&quot;0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a&quot;)
+=&gt; Creditario::Income
+</code></pre>
+
+<h4 id="label-Crear+un+Ingreso">Crear un Ingreso</h4>
+
+<pre><code>result = Creditario::Incomes.create(classification: &quot;Trabajo&quot;, amount_cents: 45000, credit_application_id: &quot;636264b1-77a2-45ef-b643-e44cfbc84d40&quot;)
+=&gt; Creditario::Income
+</code></pre>
+
+<h4 id="label-Eliminar+un+Ingreso">Eliminar un Ingreso</h4>
+
+<pre><code>result = Creditario::Incomes.delete(&quot;0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a&quot;)
+=&gt; true
+</code></pre>
+
+<h3 id="label-Egresos">Egresos</h3>
+
+<p>Las operaciones que puedes realizar sobre Egresos son: obtener, crear y eliminar.</p>
+
+<h4 id="label-Obtener+un+Egreso">Obtener un Egreso</h4>
+
+<pre><code>Creditario::Expenses.retrieve(&quot;eeedba2e-fc96-4f96-bd2e-bd046b256f96&quot;)
+=&gt; Creditario::Expense
+</code></pre>
+
+<h4 id="label-Crear+un+Egreso">Crear un Egreso</h4>
+
+<pre><code>result = Creditario::Expenses.create(classification: &quot;Renta&quot;, amount_cents: 25000, credit_application_id: &quot;636264b1-77a2-45ef-b643-e44cfbc84d40&quot;)
+=&gt; Creditario::Expense
+</code></pre>
+
+<h4 id="label-Eliminar+un+Egreso">Eliminar un Egreso</h4>
+
+<pre><code>result = Creditario::Expenses.delete(&quot;eeedba2e-fc96-4f96-bd2e-bd046b256f96&quot;)
+=&gt; true
+</code></pre>
+
+<h3 id="label-Referencias">Referencias</h3>
+
+<p>Las operaciones que puedes realizar sobre Referencias son: obtener, crear y eliminar.</p>
+
+<h4 id="label-Obtener+una+Referencia">Obtener una Referencia</h4>
+
+<pre><code>Creditario::References.retrieve(&quot;0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a&quot;)
+=&gt; Creditario::Reference
+</code></pre>
+
+<h4 id="label-Crear+una+Referencia">Crear una Referencia</h4>
+
+<pre><code>result = Creditario::References.create(classification: &quot;Amistad&quot;, name: &quot;Diane Nguyen&quot;, phone: &quot;3129743789&quot;, credit_application_id: &quot;636264b1-77a2-45ef-b643-e44cfbc84d40&quot;)
+=&gt; Creditario::Reference
+</code></pre>
+
+<h4 id="label-Eliminar+una+Referencia">Eliminar una Referencia</h4>
+
+<pre><code>result = Creditario::References.delete(&quot;0b19e3b6-9fae-40e1-a7c2-f2db1cae8a5a&quot;)
+=&gt; true
+</code></pre>
+
+<h3 id="label-Cat-C3-A1logos">Catálogos</h3>
+
+<p>Las operaciones que puedes realizar sobre Catálogos son: listar y obtener.</p>
+
+<h4 id="label-Listar+Cat-C3-A1logos+disponibles">Listar Catálogos disponibles</h4>
+
+<pre><code>result = Creditario::Catalogs.list
+=&gt; Creditario::ResourcesCollection
+
+result.items
+=&gt; [Creditario::Catalog, Creditario::Catalog, ...]
+</code></pre>
+
+<h4 id="label-Obtener+valores+de+un+Cat-C3-A1logo">Obtener valores de un Catálogo</h4>
+
+<pre><code>Creditario::Catalog.retrieve(resource: &quot;customer&quot;, field: &quot;source&quot;)
+=&gt; Creditario::ResourcesCollection
+</code></pre>
+
+<h3 id="label-Estimaciones+de+Cr-C3-A9dito">Estimaciones de Crédito</h3>
+
+<p>La operación que puedes realizar sobre Estimaciones de Crédito es: obtener.</p>
+
+<h4 id="label-Obtener+una+Estimaci-C3-B3n+de+Cr-C3-A9dito">Obtener una Estimación de Crédito</h4>
+
+<pre><code>result = Creditario::CreditEstimates.retrieve(nil, product_id: &quot;c005b7f7-a44a-4ec0-bf7f-73d15d806fd9&quot;, amount_cents: &quot;5000000&quot;, installments_number: &quot;12&quot;)
+=&gt; Creditario::CreditEstimate
+</code></pre>
+
+<h3 id="label-Cr-C3-A9ditos">Créditos</h3>
+
+<p>Las operaciones que puedes realizar sobre Créditos son: listar y obtener.</p>
+
+<h4 id="label-Listar+Cr-C3-A9ditos+de+un+Cliente">Listar Créditos de un Cliente</h4>
+
+<pre><code>result = Creditario::Credits.list(customer_id: &quot;f916636d-e045-43e4-898d-14e6dddf13f9&quot;)
+=&gt; Creditario::ResourcesCollection
+
+result.items
+=&gt; [Creditario::Credit, Creditario::Credit, ...]
+</code></pre>
+
+<h4 id="label-Obtener+un+Cr-C3-A9dito">Obtener un Crédito</h4>
+
+<pre><code>result = Creditario::Credits.retrieve(&quot;33ca13b7-9910-430c-b5d7-7ba12a9b18a5&quot;)
+=&gt; Creditario::Credit
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

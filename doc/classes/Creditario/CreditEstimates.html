@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creditario::CreditEstimates</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <meta property="og:title" value="Creditario::CreditEstimates">
+
+  
+    
+    <meta name="description" content="Creditario::CreditEstimates  Repositorio de Estimaciones de Crédito, permite obtener una Estimación de Crédito en base a un Producto de creditar.">
+    <meta property="og:description" content="Creditario::CreditEstimates  Repositorio de Estimaciones de Crédito, permite obtener una Estimación de Crédito en base a un Producto de creditar.">
+  
+
+    <meta name="keywords" content="Creditario::CreditEstimates class">
+  
+    <meta name="keywords" content="resource_path, resource_class">
+  
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span>
+            Creditario::CreditEstimates
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/creditario/repositories/credit_estimates_rb.html">lib/creditario/repositories/credit_estimates.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<h2 id="module-Creditario::CreditEstimates-label-Creditario-3A-3ACreditEstimates"><a href="CreditEstimates.html"><code>Creditario::CreditEstimates</code></a></h2>
+
+<p>Repositorio de Estimaciones de Crédito, permite obtener una Estimación de Crédito en base a un Producto de creditar.io:</p>
+<ul><li>
+<p>Obtener una Estimación:</p>
+
+<pre><code>Creditario::CreditEstimates.retrieve(nil, product_id: &quot;c005b7f7-a44a-4ec0-bf7f-73d15d806fd9&quot;, amount_cents: 1000000, installments_number: 12)
+=&gt; Creditario::CreditEstimate
+</code></pre>
+</li></ul>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-resource_class">resource_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-resource_path">resource_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_class">
+            
+              <b>resource_class</b>()
+            
+            <a href="../../classes/Creditario/CreditEstimates.html#method-c-resource_class" name="method-c-resource_class" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Clase a utilizar para transformar las respuestas de la <a href="API.html"><code>API</code></a>.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_class_source')" id="l_method-c-resource_class_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/credit_estimates.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_class</span>
+  <span class="ruby-constant">Creditario</span><span class="ruby-operator">::</span><span class="ruby-constant">CreditEstimate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-resource_path">
+            
+              <b>resource_path</b>()
+            
+            <a href="../../classes/Creditario/CreditEstimates.html#method-c-resource_path" name="method-c-resource_path" class="permalink">Link</a>
+          </div>
+
+          
+            <div class="description">
+              <p>Path de la <a href="API.html"><code>API</code></a> donde se ejecutan las peticiones para Estimaciones.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source:
+                <a href="javascript:toggleSource('method-c-resource_path_source')" id="l_method-c-resource_path_source">show</a>
+                
+              </p>
+              <div id="method-c-resource_path_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/creditario/repositories/credit_estimates.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">resource_path</span>
+  <span class="ruby-string">&quot;/credit_estimates&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>
