@@ -32,6 +32,7 @@ module Creditario # :nodoc:
   module Customers
     extend Creditario::API::List
     extend Creditario::API::Retrieve
+    extend Creditario::API::Exists
     extend Creditario::API::Create
     extend Creditario::API::Update
 
