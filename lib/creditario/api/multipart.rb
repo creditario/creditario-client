@@ -14,7 +14,7 @@ module Creditario # :nodoc:
       # Si todo sale bien devuelve una instancia del Recurso específico que el
       # Repositorio maneja.
       # De lo contrario, regresa un Hash con los errores arrojados por el servidor de creditar.io
-      def create(**params)
+      def create(*params)
         response = API.request(:multipart, self.resource_path, params)
 
         attributes = response.dig("data").first
