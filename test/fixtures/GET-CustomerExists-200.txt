@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+ETag: W/"e0bbd694a0ca1615e112902ea99e8fd3"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 73476974-a5fa-40ad-88f1-1e1b2b62b49a
+X-Runtime: 0.019284
+Transfer-Encoding: chunked
+
+{"data": [{"customer_id": "6b90eaa9-0cd7-4029-b219-a8f7af0ba3fb"}]}

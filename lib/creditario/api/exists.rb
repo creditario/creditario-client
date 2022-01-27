@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require "base64"
 
 module Creditario # :nodoc:
   module API
@@ -14,9 +15,10 @@ module Creditario # :nodoc:
       # Si todo sale bien devuelve una instancia del Recurso específico que el Repositorio maneja.
       # De lo contrario, regresa un Hash con los errores arrojados por el servidor de creditar.io
       def exists(query_params = {})
-        parts = ["exists", self.resource_path]
+        parts = [self.verify_resource_path]
         path = parts.compact.join("/")
         query_params[:cache] = true
+        query_params[:email] = Base64.encode64(query_params[:email])
         response = API.request(:get, path, query_params)
         
       rescue Creditario::Exceptions::ResourceNotFoundError => exception

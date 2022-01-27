@@ -51,6 +51,27 @@ class Creditario::CustomersTest < CreditarioAPITest
     assert result.has_key? "errors"
   end
 
+  def test_it_verify_a_customer
+    stub_request(:get, build_api_uri("exists", "customers", nil, email: "dXN1YXJpb0BuZWVkc21vbmV5LmNvbQ==%0A")).
+      with(headers: @headers).
+      to_return(use_fixture("GET-CustomerExists-200"))
+
+    result = @subject.exists(email: "usuario@needsmoney.com")
+
+    assert result.is_a? Creditario::Customer
+  end
+
+  def test_it_verify_a_missing_customer
+    stub_request(:get, build_api_uri("exists","customers", nil, email: "dXN1YXJpb0BuZWVkc21vbmV5LmNvbQ==%0A")).
+      with(headers: @headers).
+      to_return(use_fixture("GET-Customer-404"))
+
+    result = @subject.exists(email: "usuario@needsmoney.com")
+
+    assert result.is_a? Hash
+    assert result.has_key? "errors"
+  end
+
   def test_it_creates_a_customer
     stub_request(:post, build_api_uri("customers")).
       with(headers: @headers).
