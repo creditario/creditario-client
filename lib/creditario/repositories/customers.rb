@@ -43,7 +43,7 @@ module Creditario # :nodoc:
     end
 
     # Path de la API donde se ejecutan las peticiones para Clientes.
-    def self.verify_resource_path
+    def self.exists_resource_path
       "/exists/customers"
     end
 

@@ -1,0 +1,14 @@
+HTTP/1.1 404 Not Found
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v1+json; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: 640db45d-3741-4d81-975a-71df7e3ed3ce
+X-Runtime: 0.015554
+Transfer-Encoding: chunked
+
+{"errors":[{"type":"not_found","code":"ERR-404","message":"El Cliente no existe.","href":"https://creditar.io/api/documentation"}]}
