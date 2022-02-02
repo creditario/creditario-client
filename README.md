@@ -105,7 +105,7 @@ Las operaciones que puedes realizar sobre Clientes son: listar, obtener, verific
 
 #### Verificar un Cliente
 
-    Creditario::Customers.exists("usuario@needsmoney.com")
+    Creditario::Customers.exists(email: "usuario@needsmoney.com")
     => Hash
 
 #### Crear un Cliente
