@@ -55,7 +55,7 @@ class Creditario::CustomersTest < CreditarioAPITest
   end
 
   def test_it_verify_a_customer
-    stub_request(:get, build_api_uri("exists", "customers", nil, email: @encoded_email)).
+    stub_request(:get, build_api_uri("exists", "customer", nil, email: @encoded_email)).
       with(headers: @headers).
       to_return(use_fixture("GET-CustomerExists-200"))
 
@@ -65,7 +65,7 @@ class Creditario::CustomersTest < CreditarioAPITest
   end
 
   def test_it_verify_a_missing_customer
-    stub_request(:get, build_api_uri("exists","customers", nil, email: @encoded_email)).
+    stub_request(:get, build_api_uri("exists","customer", nil, email: @encoded_email)).
       with(headers: @headers).
       to_return(use_fixture("GET-CustomerExists-404"))
 

@@ -42,9 +42,9 @@ module Creditario # :nodoc:
       "/customers"
     end
 
-    # Path de la API donde se ejecutan las peticiones para Clientes.
+    # Path de la API donde se ejecutan las peticiones para Clientes, especificamente para existss.
     def self.exists_resource_path
-      "/exists/customers"
+      "/exists/customer"
     end
 
     ###
