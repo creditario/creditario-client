@@ -88,7 +88,7 @@ Las operaciones que puedes realizar sobre Productos son: listar y obtener.
 
 ### Clientes
 
-Las operaciones que puedes realizar sobre Clientes son: listar, obtener, crear y actualizar.
+Las operaciones que puedes realizar sobre Clientes son: listar, obtener, verificar, crear y actualizar.
 
 #### Listar todos los Clientes
 
@@ -102,6 +102,11 @@ Las operaciones que puedes realizar sobre Clientes son: listar, obtener, crear y
 
     Creditario::Customers.retrieve("2e9d05b8-2180-4779-bab6-bdfd41d1569f")
     => Creditario::Customer
+
+#### Verificar un Cliente
+
+    Creditario::Customers.exists(email: "usuario@needsmoney.com")
+    => Hash
 
 #### Crear un Cliente
 

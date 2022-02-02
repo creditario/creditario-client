@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "base64"
 
 class Creditario::CustomersTest < CreditarioAPITest
   def setup
@@ -17,6 +18,8 @@ class Creditario::CustomersTest < CreditarioAPITest
       last_name: "Flores",
       mother_name: "Iglesias"
     }
+    @real_email = "usuario@needsmoney.com"
+    @encoded_email = Base64.encode64(@real_email)[0..-2]
   end
 
   def test_it_list_customers
@@ -46,6 +49,27 @@ class Creditario::CustomersTest < CreditarioAPITest
       to_return(use_fixture("GET-Customer-404"))
 
     result = @subject.retrieve("92875f86-2d4e-4c4e-b0a4-7d2c4a4ca52f")
+
+    assert result.is_a? Hash
+    assert result.has_key? "errors"
+  end
+
+  def test_it_verify_a_customer
+    stub_request(:get, build_api_uri("exists", "customer", nil, email: @encoded_email)).
+      with(headers: @headers).
+      to_return(use_fixture("GET-CustomerExists-200"))
+
+    result = @subject.exists(email: @real_email)
+    
+    assert result.is_a? Hash
+  end
+
+  def test_it_verify_a_missing_customer
+    stub_request(:get, build_api_uri("exists","customer", nil, email: @encoded_email)).
+      with(headers: @headers).
+      to_return(use_fixture("GET-CustomerExists-404"))
+
+    result = @subject.exists(email: @real_email)
 
     assert result.is_a? Hash
     assert result.has_key? "errors"

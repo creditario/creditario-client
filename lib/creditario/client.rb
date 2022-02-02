@@ -13,6 +13,7 @@ require "creditario/api/multipart"
 require "creditario/api/delete"
 require "creditario/api/list"
 require "creditario/api/retrieve"
+require "creditario/api/exists"
 require "creditario/api/update"
 
 require "creditario/utils/paginated_collection"

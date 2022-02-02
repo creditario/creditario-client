@@ -32,6 +32,7 @@ module Creditario # :nodoc:
   module Customers
     extend Creditario::API::List
     extend Creditario::API::Retrieve
+    extend Creditario::API::Exists
     extend Creditario::API::Create
     extend Creditario::API::Update
 
@@ -39,6 +40,11 @@ module Creditario # :nodoc:
     # Path de la API donde se ejecutan las peticiones para Clientes.
     def self.resource_path
       "/customers"
+    end
+
+    # Path de la API donde se ejecutan las peticiones para Clientes, especificamente para existss.
+    def self.exists_resource_path
+      "/exists/customer"
     end
 
     ###
