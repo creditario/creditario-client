@@ -21,6 +21,7 @@ jobs:
           bundler-cache: true
           cache-version: 1
 
+      - name: Install bundler
         run: gem install bundler:2.1.4
 
       - name: Get tag version
