@@ -21,6 +21,16 @@ jobs:
           bundler-cache: true
           cache-version: 1
 
+        run: gem install bundler:2.1.4
+
+      - name: Get tag version
+        id: tag_version
+        run: |
+          echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+
+      - name: Print tag version
+        run: echo ${{ steps.tag_version.outputs.VERSION }}
+
       - name: Build gem
         run: gem build creditario-client.gemspec
 
