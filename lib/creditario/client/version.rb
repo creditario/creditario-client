@@ -4,6 +4,6 @@ module Creditario
   module Client
     ###
     # Versión actual de la gema *creditario-client*
-    VERSION = "0.0.7.alpha"
+    VERSION = "1.0.0"
   end
 end
