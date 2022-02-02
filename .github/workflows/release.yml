@@ -36,4 +36,4 @@ jobs:
         run: gem build creditario-client.gemspec
 
       - name: Push gem
-        run: gem push --key ${{secrets.RUBYGEMS_API_KEY}} creditario-client-${{ steps.tag_version.outputs.VERSION}}.gem
+        run: gem push creditario-client-${{ steps.tag_version.outputs.VERSION}}.gem
