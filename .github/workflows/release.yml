@@ -1,0 +1,28 @@
+name: "Release"
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  build:
+    name: Release
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.2
+          bundler-cache: true
+          cache-version: 1
+
+      - name: Build gem
+        run: gem build creditario-client.gemspec
+
+      - name: Push gem
+        run: gem push --key ${{secrets.RUBYGEMS_API_KEY}} crowdfunding-${{ steps.tag_version.outputs.VERSION}}.gem
