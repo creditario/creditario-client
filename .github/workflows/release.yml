@@ -21,9 +21,6 @@ jobs:
           bundler-cache: true
           cache-version: 1
 
-      - name: Install bundler
-        run: gem install bundler:2.1.4
-
       - name: Get tag version
         id: tag_version
         run: |
@@ -36,4 +33,6 @@ jobs:
         run: gem build creditario-client.gemspec
 
       - name: Push gem
+        env:
+          GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_API_KEY}}"
         run: gem push creditario-client-${{ steps.tag_version.outputs.VERSION}}.gem
