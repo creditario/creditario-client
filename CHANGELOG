@@ -1,3 +1,11 @@
+VERSION 1.0.1
+
+Release notes:
+
+- Upgrade for some gems
+- HOTFIX: Creditario::API::Customers#create and Creditario::API::Multipart#create
+
+
 Version 0.0.7.alpha
 
 Release notes:
