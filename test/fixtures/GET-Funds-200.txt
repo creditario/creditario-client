@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"a81cd3c480e23b83f18d03543030586a"
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Vary: Accept
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: c25379ac-5a5f-48d8-82b7-c2fdef487369
+X-Runtime: 0.178038
+Transfer-Encoding: chunked
+
+{"data":[{"amount_cents":1064000000,"status":"cancelled","created_at":"2022-08-26T15:51:44.015-05:00","updated_at":"2022-08-26T15:52:39.861-05:00","id":"61226fca-bc17-48ce-a6b9-11084a48e13d","i18n_status":"Cancelado","next_payment_at":null,"principal_paid_amount_cents":0,"interest_paid_amount_cents":0,"interest_tax_paid_amount_cents":0,"penalty_interest_paid_amount_cents":0,"penalty_interest_tax_paid_amount_cents":0,"accessories_paid_amount_cents":0,"profit_commission_amount_cents":0,"profit_commission_tax_amount_cents":0,"investor":{"id":"fe217255-d6c5-46ce-96fd-7ef85dbe74d5"},"crowdfund":{"id":"240145a7-8884-4bf5-b891-788a6dc0f885"}},{"amount_cents":1000000000,"status":"cancelled","created_at":"2022-08-26T15:51:57.732-05:00","updated_at":"2022-08-26T15:52:39.891-05:00","id":"6711dfcc-e0ac-4fa4-bc29-0f49dbf7c451","i18n_status":"Cancelado","next_payment_at":null,"principal_paid_amount_cents":0,"interest_paid_amount_cents":0,"interest_tax_paid_amount_cents":0,"penalty_interest_paid_amount_cents":0,"penalty_interest_tax_paid_amount_cents":0,"accessories_paid_amount_cents":0,"profit_commission_amount_cents":0,"profit_commission_tax_amount_cents":0,"investor":{"id":"1a107be2-831a-475a-aa02-1dcfcb28f995"},"crowdfund":{"id":"240145a7-8884-4bf5-b891-788a6dc0f885"}},{"amount_cents":582000000,"status":"funded","created_at":"2022-08-26T15:54:21.700-05:00","updated_at":"2022-08-26T15:54:21.700-05:00","id":"b377b970-41bc-4488-9ea4-2913be09a624","i18n_status":"Prestado","next_payment_at":null,"principal_paid_amount_cents":0,"interest_paid_amount_cents":0,"interest_tax_paid_amount_cents":0,"penalty_interest_paid_amount_cents":0,"penalty_interest_tax_paid_amount_cents":0,"accessories_paid_amount_cents":0,"profit_commission_amount_cents":0,"profit_commission_tax_amount_cents":0,"investor":{"id":"fe217255-d6c5-46ce-96fd-7ef85dbe74d5"},"crowdfund":{"id":"368d11db-f032-431d-9ccf-ed543e31ef49"}},{"amount_cents":582000000,"status":"funded","created_at":"2022-08-26T15:54:35.862-05:00","updated_at":"2022-08-26T15:54:35.862-05:00","id":"e620e994-92fa-44aa-a3d0-35205db0840a","i18n_status":"Prestado","next_payment_at":null,"principal_paid_amount_cents":0,"interest_paid_amount_cents":0,"interest_tax_paid_amount_cents":0,"penalty_interest_paid_amount_cents":0,"penalty_interest_tax_paid_amount_cents":0,"accessories_paid_amount_cents":0,"profit_commission_amount_cents":0,"profit_commission_tax_amount_cents":0,"investor":{"id":"1a107be2-831a-475a-aa02-1dcfcb28f995"},"crowdfund":{"id":"368d11db-f032-431d-9ccf-ed543e31ef49"}}],"links":[{"rel":"self","uri":"/crowdfunding/funds"}],"pagination":{"cursors":{"after":"e620e994-92fa-44aa-a3d0-35205db0840a","next_uri":"/crowdfunding/funds?cursor=e620e994-92fa-44aa-a3d0-35205db0840a"}}}

@@ -2,10 +2,9 @@
 
 require "oj"
 
+require "creditario/exceptions"
 require "creditario/client/version"
 require "creditario/client/railtie" if defined?(Rails)
-
-require "creditario/exceptions"
 
 require "creditario/api/request"
 require "creditario/api/create"
@@ -36,6 +35,12 @@ require "creditario/resources/movement"
 require "creditario/resources/qualify_score_flow"
 require "creditario/resources/investor"
 
+require "creditario/resources/crowdfunding/fund"
+require "creditario/resources/crowdfunding/investor"
+require "creditario/resources/crowdfunding/movement"
+require "creditario/resources/crowdfunding/contract"
+require "creditario/resources/crowdfunding/crowdfund"
+
 require "creditario/repositories/applications"
 require "creditario/repositories/customers"
 require "creditario/repositories/products"
@@ -52,6 +57,12 @@ require "creditario/repositories/movements"
 require "creditario/repositories/qualify_score_flows"
 require "creditario/repositories/convert_application_to_credits"
 require "creditario/repositories/investors"
+
+require "creditario/repositories/crowdfunding/investors"
+require "creditario/repositories/crowdfunding/crowdfunds"
+require "creditario/repositories/crowdfunding/funds"
+require "creditario/repositories/crowdfunding/movements"
+require "creditario/repositories/crowdfunding/contracts"
 
 module Creditario # :nodoc:
   ###

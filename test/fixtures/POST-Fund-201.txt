@@ -1,0 +1,16 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Vary: Accept
+ETag: W/"7f78d4c22740fca68aae595ef89bf1b2"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 91d911ee-a847-46d5-89cc-9f8600f7d079
+X-Runtime: 0.066365
+Transfer-Encoding: chunked
+
+{"data":[{"amount_cents":50000000,"status":"funding","created_at":"2022-08-30T16:39:21.668-05:00","updated_at":"2022-08-30T16:39:21.668-05:00","id":"4ed045df-aa89-47a8-9aee-f2500967b6cf","i18n_status":"En préstamo","next_payment_at":null,"principal_paid_amount_cents":0,"interest_paid_amount_cents":0,"interest_tax_paid_amount_cents":0,"penalty_interest_paid_amount_cents":0,"penalty_interest_tax_paid_amount_cents":0,"accessories_paid_amount_cents":0,"profit_commission_amount_cents":0,"profit_commission_tax_amount_cents":0,"investor":{"id":"1a107be2-831a-475a-aa02-1dcfcb28f995"},"crowdfund":{"id":"342c4bc7-32ec-45f7-abe2-5921b898a952"}}],"links":[{"rel":"self","uri":"/crowdfunding/funds/4ed045df-aa89-47a8-9aee-f2500967b6cf"},{"id":"1a107be2-831a-475a-aa02-1dcfcb28f995","rel":"investor","uri":"/crowdfunding/investors/1a107be2-831a-475a-aa02-1dcfcb28f995"},{"id":"342c4bc7-32ec-45f7-abe2-5921b898a952","rel":"crowdfund","uri":"/crowdfunding/crowdfunds/342c4bc7-32ec-45f7-abe2-5921b898a952"}]}

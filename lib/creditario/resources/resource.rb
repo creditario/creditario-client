@@ -62,12 +62,16 @@ module Creditario # :nodoc:
           if self.class.class_variable_defined?(:@@associations)
             association = self.class.class_variable_get(:@@associations).find { |association| association[:name] == attribute.to_sym }
             unless association.nil?
-              attributes[attribute] = build_associations(association[:class], value)
+              attributes[attribute] = build_associations(constantize(association[:class].to_s), value)
             end
           end
 
           define_attribute_setter_and_getter(attribute, value)
         end
+      end
+
+      def constantize(camel_cased_word)
+        Object.const_get(camel_cased_word)
       end
 
       def define_attribute_setter_and_getter(attribute, value)

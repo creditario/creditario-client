@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"e6476c18c0be901b1e3bfa5138625a43"
+Last-Modified: Fri, 26 Aug 2022 20:49:27 GMT
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Vary: Accept
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: d1a9ba8f-f0c8-4685-a4a9-fab70fdc45b9
+X-Runtime: 0.016716
+Transfer-Encoding: chunked
+
+{"data":[{"title":"Contrato inversionista","body":"Contrato","id":"1d3775bd-ec91-44db-9c1d-144a2deb3828"}],"links":[{"rel":"self","uri":"/crowdfunding/investor_contracts/1d3775bd-ec91-44db-9c1d-144a2deb3828"}]}

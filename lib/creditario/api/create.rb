@@ -14,8 +14,16 @@ module Creditario # :nodoc:
       # Si todo sale bien devuelve una instancia del Recurso específico que el
       # Repositorio maneja.
       # De lo contrario, regresa un Hash con los errores arrojados por el servidor de creditar.io
+      #
+      # Nota: Si desea hacer uso de *multipart/form-data* es necesario pasar un parametro enctype con valor true
+      # para habilitarlo, por ejemplo:
+      #
+      #     result = Creditario::Crowdfunding::Investors.create(email: "karla@quiereinvertir.com", encypte: true)
+      #
       def create(params = {})
-        response = API.request(:post, self.resource_path, params)
+        enctype = params.delete(:enctype) || false
+        request_method = enctype ? :multipart : :post
+        response = API.request(request_method, self.resource_path, params)
 
         attributes = response.dig("data").first
         links = response.dig("links")

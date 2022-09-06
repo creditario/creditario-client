@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"fc3871992a23c330e11b1ef3c4492d76"
+Last-Modified: Fri, 26 Aug 2022 20:48:57 GMT
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Vary: Accept
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 28482c89-4f70-4f48-b66f-9c959d007115
+X-Runtime: 0.026680
+Transfer-Encoding: chunked
+
+{"data":[{"movement_type":"credit","amount_cents":5000000000,"reference":null,"tracking_number":null,"created_at":"2022-08-26T15:48:57.361-05:00","updated_at":"2022-08-26T15:48:57.361-05:00","id":"a84985f2-dab4-4584-9bdc-0dae4a1b334b","i18n_movement_type":"Crédito","breakdown_payment":{},"investor":{"id":"fe217255-d6c5-46ce-96fd-7ef85dbe74d5"},"fund":{},"payment":{}}],"links":[{"rel":"self","uri":"/crowdfunding/movements/a84985f2-dab4-4584-9bdc-0dae4a1b334b"},{"id":"fe217255-d6c5-46ce-96fd-7ef85dbe74d5","rel":"investor","uri":"/crowdfunding/investors/fe217255-d6c5-46ce-96fd-7ef85dbe74d5"}]}

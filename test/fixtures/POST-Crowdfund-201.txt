@@ -1,0 +1,16 @@
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Vary: Accept
+ETag: W/"fc0a46133e4ea0cc73625afdb8d0c837"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: c1550bdd-fe86-4516-8f4c-a6b8dacb8ce8
+X-Runtime: 0.066916
+Transfer-Encoding: chunked
+
+{"data":[{"amount_cents":100000000,"collected_amount_cents":0,"success_percentage":"80.0","funds_without_limit":true,"campaign_days":30,"canceled_notes":null,"status":"active","funded_at":null,"canceled_at":null,"created_at":"2022-08-30T16:24:11.073-05:00","updated_at":"2022-08-30T16:24:11.103-05:00","id":"342c4bc7-32ec-45f7-abe2-5921b898a952","expiration_date":"2022-09-29","i18n_status":"Activa","credit_application":{"id":"43339b6d-7185-4120-9a28-29f272dbeb42"},"credit":{},"funds":[]}],"links":[{"rel":"self","uri":"/crowdfunding/crowdfunds/342c4bc7-32ec-45f7-abe2-5921b898a952"},{"id":"43339b6d-7185-4120-9a28-29f272dbeb42","rel":"application","uri":"/applications/43339b6d-7185-4120-9a28-29f272dbeb42"}]}

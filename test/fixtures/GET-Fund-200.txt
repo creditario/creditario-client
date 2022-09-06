@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"a23893422e7db2ce3986da9b7efb8241"
+Last-Modified: Fri, 26 Aug 2022 20:52:39 GMT
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Vary: Accept
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 18900318-458d-477d-b95a-3a7ebe2c5867
+X-Runtime: 0.047570
+Transfer-Encoding: chunked
+
+{"data":[{"amount_cents":1064000000,"status":"cancelled","created_at":"2022-08-26T15:51:44.015-05:00","updated_at":"2022-08-26T15:52:39.861-05:00","id":"61226fca-bc17-48ce-a6b9-11084a48e13d","i18n_status":"Cancelado","next_payment_at":null,"principal_paid_amount_cents":0,"interest_paid_amount_cents":0,"interest_tax_paid_amount_cents":0,"penalty_interest_paid_amount_cents":0,"penalty_interest_tax_paid_amount_cents":0,"accessories_paid_amount_cents":0,"profit_commission_amount_cents":0,"profit_commission_tax_amount_cents":0,"investor":{"id":"fe217255-d6c5-46ce-96fd-7ef85dbe74d5"},"crowdfund":{"id":"240145a7-8884-4bf5-b891-788a6dc0f885"}}],"links":[{"rel":"self","uri":"/crowdfunding/funds/61226fca-bc17-48ce-a6b9-11084a48e13d"},{"id":"fe217255-d6c5-46ce-96fd-7ef85dbe74d5","rel":"investor","uri":"/crowdfunding/investors/fe217255-d6c5-46ce-96fd-7ef85dbe74d5"},{"id":"240145a7-8884-4bf5-b891-788a6dc0f885","rel":"crowdfund","uri":"/crowdfunding/crowdfunds/240145a7-8884-4bf5-b891-788a6dc0f885"}]}
