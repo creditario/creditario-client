@@ -23,7 +23,7 @@ module Creditario # :nodoc:
         enctype = params.delete(:enctype) || false
         path = "#{self.resource_path}/#{id}"
         path = include_param.nil? ? path : path + "?include=#{include_param}"
-        request_method = enctype ? :multipart : :patch
+        request_method = enctype ? :multipart_patch : :patch
         response = API.request(request_method, path, params)
 
         attributes = response.dig("data").first

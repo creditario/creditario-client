@@ -38,7 +38,7 @@ class Creditario::API::RequestTest < CreditarioAPITest
       with(headers: @headers).
       to_return(status: 201, body: "{}")
 
-    @subject.request(:multipart, "/attachments")
+    @subject.request(:multipart_post, "/attachments")
 
     assert_requested :post, build_api_uri("attachments")
   end

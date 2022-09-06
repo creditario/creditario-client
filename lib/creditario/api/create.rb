@@ -22,7 +22,7 @@ module Creditario # :nodoc:
       #
       def create(params = {})
         enctype = params.delete(:enctype) || false
-        request_method = enctype ? :multipart : :post
+        request_method = enctype ? :multipart_post : :post
         response = API.request(request_method, self.resource_path, params)
 
         attributes = response.dig("data").first
