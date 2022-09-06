@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"1e7cfd22b29797f6ec5e8413f9d4b612"
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Vary: Accept
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 8ad70c4c-f541-4822-a99f-03621fb91f09
+X-Runtime: 0.327598
+Transfer-Encoding: chunked
+
+{"data":[{"amount_cents":1164000000,"collected_amount_cents":0,"success_percentage":"80.0","funds_without_limit":false,"campaign_days":30,"canceled_notes":"La campaña ha sido rechazada","status":"rejected","funded_at":"2022-08-26","canceled_at":"2022-08-26","created_at":"2022-08-26T15:51:23.126-05:00","updated_at":"2022-08-26T15:52:39.959-05:00","id":"240145a7-8884-4bf5-b891-788a6dc0f885","expiration_date":"2022-09-25","i18n_status":"Rechazada","credit_application":{"id":"989d6e75-6b00-486c-85b6-74bba2f63721"},"credit":{},"funds":[{"id":"61226fca-bc17-48ce-a6b9-11084a48e13d"},{"id":"6711dfcc-e0ac-4fa4-bc29-0f49dbf7c451"}]},{"amount_cents":1164000000,"collected_amount_cents":1164000000,"success_percentage":"80.0","funds_without_limit":false,"campaign_days":30,"canceled_notes":null,"status":"credit","funded_at":"2022-08-26","canceled_at":null,"created_at":"2022-08-26T15:53:46.209-05:00","updated_at":"2022-08-26T15:56:32.842-05:00","id":"368d11db-f032-431d-9ccf-ed543e31ef49","expiration_date":"2022-09-25","i18n_status":"En crédito","credit_application":{"id":"08b5952e-cab8-49e4-a125-19dbcf97517d"},"credit":{"id":"d22294dc-5652-4113-9290-4a61dbbcdbe7"},"funds":[{"id":"b377b970-41bc-4488-9ea4-2913be09a624"},{"id":"e620e994-92fa-44aa-a3d0-35205db0840a"}]}],"links":[{"rel":"self","uri":"/crowdfunding/crowdfunds"}],"pagination":{"cursors":{"after":"368d11db-f032-431d-9ccf-ed543e31ef49","next_uri":"/crowdfunding/crowdfunds?cursor=368d11db-f032-431d-9ccf-ed543e31ef49"}}}

@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"d0463d14b0fae8272ec72617afa3a243"
+Last-Modified: Fri, 26 Aug 2022 20:52:39 GMT
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Vary: Accept
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: b942d844-f6e7-4a17-aa5d-e7fa6b6fec96
+X-Runtime: 0.055706
+Transfer-Encoding: chunked
+
+{"data":[{"amount_cents":1164000000,"collected_amount_cents":0,"success_percentage":"80.0","funds_without_limit":false,"campaign_days":30,"canceled_notes":"La campaña ha sido rechazada","status":"rejected","funded_at":"2022-08-26","canceled_at":"2022-08-26","created_at":"2022-08-26T15:51:23.126-05:00","updated_at":"2022-08-26T15:52:39.959-05:00","id":"240145a7-8884-4bf5-b891-788a6dc0f885","expiration_date":"2022-09-25","i18n_status":"Rechazada","credit_application":{"id":"989d6e75-6b00-486c-85b6-74bba2f63721"},"credit":{},"funds":[{"id":"61226fca-bc17-48ce-a6b9-11084a48e13d"},{"id":"6711dfcc-e0ac-4fa4-bc29-0f49dbf7c451"}]}],"links":[{"rel":"self","uri":"/crowdfunding/crowdfunds/240145a7-8884-4bf5-b891-788a6dc0f885"},{"id":"989d6e75-6b00-486c-85b6-74bba2f63721","rel":"application","uri":"/applications/989d6e75-6b00-486c-85b6-74bba2f63721"},{"id":"61226fca-bc17-48ce-a6b9-11084a48e13d","rel":"fund","uri":"/crowdfunding/funds/61226fca-bc17-48ce-a6b9-11084a48e13d"},{"id":"6711dfcc-e0ac-4fa4-bc29-0f49dbf7c451","rel":"fund","uri":"/crowdfunding/funds/6711dfcc-e0ac-4fa4-bc29-0f49dbf7c451"}]}

@@ -1,0 +1,15 @@
+HTTP/1.1 404 Not Found
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/vnd.creditar.v2+json; charset=utf-8
+Vary: Accept
+Cache-Control: no-cache
+X-Request-Id: 73ef9dfa-0325-45f3-9372-1d17f9764566
+X-Runtime: 0.036846
+Transfer-Encoding: chunked
+
+{"errors":[{"type":"not_found","code":"ERR-404","message":"El recurso no existe.","href":"https://www.creditar.io/api/documentation#err-404"}]}
