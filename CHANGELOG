@@ -1,3 +1,9 @@
+VERSION 1.1.2
+
+Release notes:
+
+- HOTFIX: Inverstors repository on update action can't upload documents using multipart/form-data.
+
 VERSION 1.1.0
 
 Release notes:
