@@ -32,6 +32,9 @@ module Creditario # :nodoc:
           uri = URI(Creditario::Client.api_base + path)
           request = request_from_method(method, uri, params)
 
+          request["User-Agent"] = "creditario-client gem v#{Creditario::Client::VERSION}"
+          request["Accept"] = "application/vnd.creditar.v#{Creditario::Client.api_version}+json"
+
           response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == "https") do |http|
             http.request(request)
           end
@@ -63,8 +66,10 @@ module Creditario # :nodoc:
               request
             when :post
               set_request_body(set_request_headers(Net::HTTP::Post.new(uri)), params)
-            when :multipart
+            when :multipart_post
               set_authorization_headers(Net::HTTP::Post::Multipart.new(uri, params))
+            when :multipart_patch
+              set_authorization_headers(Net::HTTP::Put::Multipart.new(uri, params))
             when :delete
               set_request_headers(Net::HTTP::Delete.new(uri))
             when :patch
@@ -75,8 +80,6 @@ module Creditario # :nodoc:
           def set_request_headers(request)
             request = set_authorization_headers(request)
 
-            request["User-Agent"] = "creditario-client gem v#{Creditario::Client::VERSION}"
-            request["Accept"] = "application/vnd.creditar.v#{Creditario::Client.api_version}+json"
             request["Content-Type"] = "application/json"
 
             request
